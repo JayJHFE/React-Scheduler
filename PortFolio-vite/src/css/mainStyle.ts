@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
-const container = styled.div`
-  border: 1px solid black;
+export const container = styled.div`
+  display: flex;
+  border: 1px solid red;
+`;
+export const innerContainer = styled.div`
+  display: flex;
+  flex-direction: row;
 `;

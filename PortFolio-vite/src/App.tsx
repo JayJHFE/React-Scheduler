@@ -2,7 +2,7 @@
 // import reactLogo from "./assets/react.svg";
 // import viteLogo from "/vite.svg";
 import "./App.css";
-import * as S from "./css/mainStyle";
+import * as S from "./css/mainStyle.ts";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -10,10 +10,10 @@ function App() {
   return (
     <>
       <S.container>아래의 메뉴 중 선택해 주세요</S.container>
-      <div>
+      <S.innerContainer>
         <div>리액트 + 바이트 기본페이지</div>
         <div>스케줄러</div>
-      </div>
+      </S.innerContainer>
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
