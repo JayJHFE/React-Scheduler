@@ -3,6 +3,7 @@
 // import viteLogo from "/vite.svg";
 import "./App.css";
 import * as S from "./css/mainStyle.ts";
+import Scheduler from "./page/scheduler.tsx";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -11,8 +12,11 @@ function App() {
     <>
       <S.container>아래의 메뉴 중 선택해 주세요</S.container>
       <S.innerContainer>
-        <div>리액트 + 바이트 기본페이지</div>
-        <div>스케줄러</div>
+        <S.innerLeftContainer>리액트 + 바이트 기본페이지</S.innerLeftContainer>
+        {/* 아래 링크태그로 이동 */}
+        <S.innerRightContainer>
+          <Scheduler />
+        </S.innerRightContainer>
       </S.innerContainer>
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
