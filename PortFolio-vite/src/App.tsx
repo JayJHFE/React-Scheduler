@@ -3,7 +3,9 @@
 // import viteLogo from "/vite.svg";
 import "./App.css";
 import * as S from "./css/mainStyle.ts";
-import Scheduler from "./page/scheduler.tsx";
+import Main from "./page/main/index.tsx";
+import Scheduler from "./page/scheduler/index.tsx";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -11,12 +13,15 @@ function App() {
   return (
     <>
       <S.container>아래의 메뉴 중 선택해 주세요</S.container>
+      {/* div 클릭시 아래 설정대로 이동 */}
+      {/* <S.menuContainer>
+        <S.menuItem to="/">메인</S.menuItem>
+        <S.menuItem to="/scheduler">스케줄러</S.menuItem> */}
       <S.innerContainer>
-        <S.innerLeftContainer>리액트 + 바이트 기본페이지</S.innerLeftContainer>
-        {/* 아래 링크태그로 이동 */}
-        <S.innerRightContainer>
-          <Scheduler />
-        </S.innerRightContainer>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/scheduler" element={<Scheduler />} />
+        </Routes>
       </S.innerContainer>
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
