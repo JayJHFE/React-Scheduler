@@ -1,16 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const componentChangeSlice = createSlice({
+// 메인 페이지 렌더링을 위한 createSlice 생성
+export const componentChangeReducer = createSlice({
   name: "changeComponent",
   initialState: {
+    //초기값 false
     value: false,
   },
   reducers: {
+    // reducer로 notmain, main을 생성
     notMain: (state) => {
-      // Redux Toolkit allows us to write "mutating" logic in reducers. It
-      // doesn't actually mutate the state because it uses the Immer library,
-      // which detects changes to a "draft state" and produces a brand new
-      // immutable state based off those changes
       state.value = true;
     },
     main: (state) => {
@@ -19,7 +18,7 @@ export const componentChangeSlice = createSlice({
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { notMain, main } = componentChangeSlice.actions;
+// componentChangeSlice의 actions를 export
+export const { notMain, main } = componentChangeReducer.actions;
 
-export default componentChangeSlice.reducer;
+export default componentChangeReducer.reducer;

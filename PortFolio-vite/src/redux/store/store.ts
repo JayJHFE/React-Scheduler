@@ -1,5 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
+import componentChangeReducer from "../slice/componentChangeSlice";
 
 export const store = configureStore({
-  reducer: {},
+  reducer: {
+    componentChange: componentChangeReducer,
+  },
 });
