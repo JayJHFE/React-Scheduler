@@ -5,20 +5,24 @@ export const componentChangeReducer = createSlice({
   name: "changeComponent",
   initialState: {
     //초기값 false
-    value: false,
+    value: "main",
   },
   reducers: {
     // reducer로 notmain, main을 생성
-    notMain: (state) => {
-      state.value = true;
+    showHome: (state) => {
+      state.value = "home"; // 상태를 'home' 문자열로 업데이트
     },
-    main: (state) => {
-      state.value = false;
+    showMain: (state) => {
+      state.value = "main"; // 상태를 'main' 문자열로 업데이트
+    },
+    showScheduler: (state) => {
+      state.value = "scheduler"; // 상태를 'scheduler' 문자열로 업데이트
     },
   },
 });
 
 // componentChangeSlice의 actions를 export
-export const { notMain, main } = componentChangeReducer.actions;
+export const { showHome, showMain, showScheduler } =
+  componentChangeReducer.actions;
 
 export default componentChangeReducer.reducer;
