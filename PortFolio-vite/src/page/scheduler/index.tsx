@@ -1,9 +1,11 @@
+import Calendar from "../../components/scheduler/calendar";
+
 export default function Scheduler() {
   return (
     <>
       <div>
         메인컨테이너
-        <div>상단 컨테이너</div>
+        <Calendar />
         <div>
           하단 컨테이너
           <div>
