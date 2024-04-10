@@ -15,9 +15,18 @@ function Calendar() {
     <div>
       {/* date의 날짜로 달력 표기 */}
       <div>스케줄러 표기</div>
-      {daysArray.map((day) => (
-        <div key={day}>{`${currentDate.format("YYYY-MM")}-${day}`}</div>
-      ))}
+      <ul>
+        {daysArray.map((day) => (
+          <li key={day}>
+            {/* {`${day}`} */}
+            <div>
+              <p class="dayweek">요일</p>
+              <p class="day">{`${day}`}</p>
+              <p class="dispatch"></p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
