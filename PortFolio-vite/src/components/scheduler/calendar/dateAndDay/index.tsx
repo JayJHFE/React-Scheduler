@@ -1,10 +1,10 @@
-function dateAndDay(props: { day: number }) {
+function DateAndDay(props: { day: number; date: string }) {
   return (
     <div>
-      <p class="dayweek"></p>
-      <p class="day">{`${props.day}`}</p>
-      <p class="dispatch"></p>
+      <p>{`{props.date}`}</p>
+      <p>{`${props.day}`}</p>
+      <p></p>
     </div>
   );
 }
-export default dateAndDay;
+export default DateAndDay;

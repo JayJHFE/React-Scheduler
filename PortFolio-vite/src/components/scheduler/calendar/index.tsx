@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import DateAndDay from "./dateAndDay";
 
 function Calendar() {
   // 오늘 날짜
@@ -11,6 +12,7 @@ function Calendar() {
     { length: daysInMonth },
     (_, index) => index + 1
   );
+
   return (
     <div>
       {/* date의 날짜로 달력 표기 */}
@@ -19,11 +21,10 @@ function Calendar() {
         {daysArray.map((day) => (
           <li key={day}>
             {/* {`${day}`} */}
-            <div>
-              <p class="dayweek">요일</p>
-              <p class="day">{`${day}`}</p>
-              <p class="dispatch"></p>
-            </div>
+            <DateAndDay
+              day={day}
+              date={currentDate.date(day).format("YYYY-MM-DD")}
+            />
           </li>
         ))}
       </ul>
