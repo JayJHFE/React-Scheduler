@@ -7,11 +7,16 @@ function Calendar() {
   // 이번달에 해당하는 날짜 수 추출
   const daysInMonth = currentDate.daysInMonth();
 
+  // 현재 달의 모든 날짜와 요일에 대한 배열 생성
+
   // 현재 달의 모든 날짜에 대한 배열 생성
   const daysArray = Array.from(
     { length: daysInMonth },
     (_, index) => index + 1
   );
+
+  //각 날짜에 대한 요일 생성
+  const dayOfWeek = currentDate.date(1).day();
 
   return (
     <div>
