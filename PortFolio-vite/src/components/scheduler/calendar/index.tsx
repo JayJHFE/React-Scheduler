@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import "dayjs/locale/ko";
 import DateAndDay from "./dateAndDay";
 dayjs.locale("ko");
 
@@ -19,32 +20,32 @@ function Calendar() {
   const getAllDaysAndWeekdaysInMonth = (year: number, month: number) => {
     const startDate = dayjs(`${year}-${month}-01`); // 월의 첫 날
     const daysInMonth = startDate.daysInMonth(); // 해당 월의 일수
-    let daysWithWeekdays = [];
+    const daysWithWeekdays = [];
 
     for (let day = 1; day <= daysInMonth; day++) {
       const currentDay = startDate.date(day);
       daysWithWeekdays.push({
-        date: currentDay.format("YYYY-MM-DD"), // 날짜
-        weekdayNumber: currentDay.day(), // 요일 번호
-        weekdayName: currentDay.format("dddd"), // 요일 이름
+        // 날짜
+        date: currentDay.format("DD"),
+        // 요일 이름
+        weekdayName: currentDay.format("dd"),
       });
     }
 
     return daysWithWeekdays;
   };
 
+  const selectedDate = getAllDaysAndWeekdaysInMonth(2024, 4);
+  console.log(selectedDate);
+
   return (
     <div>
       {/* date의 날짜로 달력 표기 */}
       <div>스케줄러 표기</div>
       <ul>
-        {daysArray.map((day) => (
-          <li key={day}>
-            {/* {`${day}`} */}
-            <DateAndDay
-              day={day}
-              date={currentDate.date(day).format("YYYY-MM-DD")}
-            />
+        {selectedDate?.map((day, idx) => (
+          <li key={idx}>
+            <DateAndDay day={day.date} date={day.weekdayName} />
           </li>
         ))}
       </ul>

@@ -1,4 +1,4 @@
-function DateAndDay(props: { day: number; date: string }) {
+function DateAndDay(props: { day: string; date: string }) {
   return (
     <div>
       <p>{`${props.date}`}</p>
