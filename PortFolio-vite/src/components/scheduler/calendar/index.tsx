@@ -42,13 +42,13 @@ function Calendar() {
     <div>
       {/* date의 날짜로 달력 표기 */}
       <div>스케줄러 표기</div>
-      <ul>
+      <div>
         {selectedDate?.map((day, idx) => (
-          <li key={idx}>
+          <div key={idx}>
             <DateAndDay day={day.date} date={day.weekdayName} />
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
