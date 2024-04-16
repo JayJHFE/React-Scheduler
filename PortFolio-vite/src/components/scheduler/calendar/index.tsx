@@ -43,13 +43,13 @@ function Calendar() {
     <div>
       {/* date의 날짜로 달력 표기 */}
       <div>스케줄러 표기</div>
-      <div>
+      <S.rowScheduler>
         {selectedDate?.map((day, idx) => (
-          <S.rowScheduler key={idx}>
+          <div key={idx}>
             <DateAndDay day={day.date} date={day.weekdayName} />
-          </S.rowScheduler>
+          </div>
         ))}
-      </div>
+      </S.rowScheduler>
     </div>
   );
 }
