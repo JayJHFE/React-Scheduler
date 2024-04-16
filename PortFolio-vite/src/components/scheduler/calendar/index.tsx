@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import "dayjs/locale/ko";
 import DateAndDay from "./dateAndDay";
+import * as S from "../../../css/scheduler.ts";
 dayjs.locale("ko");
 
 function Calendar() {
@@ -44,9 +45,9 @@ function Calendar() {
       <div>스케줄러 표기</div>
       <div>
         {selectedDate?.map((day, idx) => (
-          <div key={idx}>
+          <S.rowScheduler key={idx}>
             <DateAndDay day={day.date} date={day.weekdayName} />
-          </div>
+          </S.rowScheduler>
         ))}
       </div>
     </div>
