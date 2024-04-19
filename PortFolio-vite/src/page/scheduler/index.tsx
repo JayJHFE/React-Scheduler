@@ -1,9 +1,10 @@
 import Calendar from "../../components/scheduler/calendar";
+import * as S from "../../css/mainStyle";
 
 export default function Scheduler() {
   return (
     <>
-      <div>
+      <S.Container>
         메인컨테이너
         <Calendar />
         <div>
@@ -17,7 +18,7 @@ export default function Scheduler() {
             <div>일정용 리스트 표기</div>
           </div>
         </div>
-      </div>
+      </S.Container>
     </>
   );
 }
