@@ -7,7 +7,7 @@ export default function Scheduler() {
       <S.Container>
         메인컨테이너
         <Calendar />
-        <div>
+        <S.innerContainer>
           하단 컨테이너
           <div>
             좌측 컨테이너
@@ -17,7 +17,7 @@ export default function Scheduler() {
             우측 컨테이너
             <div>일정용 리스트 표기</div>
           </div>
-        </div>
+        </S.innerContainer>
       </S.Container>
     </>
   );
