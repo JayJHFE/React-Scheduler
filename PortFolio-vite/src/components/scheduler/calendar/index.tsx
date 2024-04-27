@@ -28,7 +28,6 @@ function Calendar() {
 
   return (
     <div>
-      date의 날짜로 달력 표기
       <div>스케줄러 표기</div>
       <S.rowScheduler>
         {selectedDate?.map((day, idx) => (
