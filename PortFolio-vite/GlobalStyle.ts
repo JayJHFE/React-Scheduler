@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         baground-color: #f0f0f0;
+        height: 100vh;
     }
 
     *, *::before, *::after {
