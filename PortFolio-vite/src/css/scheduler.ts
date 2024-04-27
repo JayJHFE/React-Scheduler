@@ -4,6 +4,6 @@ export const rowScheduler = styled.div`
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-  width: 100%;
+  width: 1920px;
   white-space: nowrap;
 `;
