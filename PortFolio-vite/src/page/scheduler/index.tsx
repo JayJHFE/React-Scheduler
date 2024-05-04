@@ -1,7 +1,10 @@
 import Calendar from "../../components/scheduler/calendar";
 import * as S from "../../css/mainStyle";
+import jsonData from "../../../public/test.json";
 
 export default function Scheduler() {
+  const data = jsonData;
+  console.log(data);
   return (
     <>
       <S.Container>
