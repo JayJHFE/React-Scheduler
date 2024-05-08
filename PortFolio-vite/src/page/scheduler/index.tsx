@@ -12,9 +12,9 @@ export default function Scheduler() {
         메인컨테이너
         <Calendar />
         <S.innerContainer>
-          {/* {data.forEach((vehicle) => {
+          {data[0].forEach((vehicle) => {
             console.log(vehicle.name);
-          })} */}
+          })}
           <div>
             좌측 컨테이너
             <div>스케줄러 표기</div>
