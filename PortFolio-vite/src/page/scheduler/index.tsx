@@ -14,11 +14,14 @@ export default function Scheduler() {
         <S.innerContainer>
           {data &&
             data[0].map((vehicle) => (
-              <div key={vehicle.id}>차량 이름: {vehicle.name}</div>
+              <div style={{ display: "flex", flexDirection: "row" }}>
+                <div key={vehicle.id}>차량 이름: {vehicle.name}</div>
+                {Array.from({ length: 24 }, (_, i) => (
+                  <div key={i}>{i}</div>
+                ))}
+              </div>
             ))}
-            {data && {
-              for(let i = 0; i <24; i++){
-            }}
+          {/* for문으로 div 24개 생성 */}
           <div>
             좌측 컨테이너
             <div>스케줄러 표기</div>
