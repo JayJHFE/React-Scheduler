@@ -16,6 +16,9 @@ export default function Scheduler() {
             data[0].map((vehicle) => (
               <div key={vehicle.id}>차량 이름: {vehicle.name}</div>
             ))}
+            {data && {
+              for(let i = 0; i <24; i++){
+            }}
           <div>
             좌측 컨테이너
             <div>스케줄러 표기</div>
