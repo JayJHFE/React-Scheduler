@@ -15,11 +15,17 @@ export default function Scheduler() {
           {data &&
             data[0].map((vehicle) => (
               <div style={{ display: "flex", flexDirection: "row" }}>
-                <div style={{ backgroundColor: "red" }} key={vehicle.id}>
-                  차량 이름: {vehicle.name}
+                <div
+                  style={{ backgroundColor: "red", width: "100px" }}
+                  key={vehicle.id}
+                >
+                  {vehicle.name}
                 </div>
                 {Array.from({ length: 24 }, (_, i) => (
-                  <div style={{ backgroundColor: "red" }} key={i}>
+                  <div
+                    style={{ backgroundColor: "red", width: "100px" }}
+                    key={i}
+                  >
                     {i}
                   </div>
                 ))}
