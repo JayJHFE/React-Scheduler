@@ -27,8 +27,13 @@ function Calendar() {
   console.log(selectedDate);
 
   return (
-    <div>
-      <div>스케줄러 표기</div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+      }}
+    >
       <S.rowScheduler>
         {selectedDate?.map((day, idx) => (
           <div key={idx}>

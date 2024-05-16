@@ -4,7 +4,7 @@ export const rowScheduler = styled.div`
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-  width: 100%;
+  width: 90%;
   white-space: nowrap;
   padding: 20px 10px 20px 10px;
   border: 1px solid #f0f0f0;
