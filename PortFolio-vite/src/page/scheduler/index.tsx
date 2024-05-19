@@ -25,7 +25,7 @@ export default function Scheduler() {
                   <div
                     style={{
                       backgroundColor: "red",
-                      width: "100px",
+                      width: "150px",
                       border: "1px solid black",
                     }}
                     key={i}
