@@ -23,7 +23,11 @@ export default function Scheduler() {
                 </div>
                 {Array.from({ length: 24 }, (_, i) => (
                   <div
-                    style={{ backgroundColor: "red", width: "100px" }}
+                    style={{
+                      backgroundColor: "red",
+                      width: "100px",
+                      border: "1px solid black",
+                    }}
                     key={i}
                   >
                     {i}

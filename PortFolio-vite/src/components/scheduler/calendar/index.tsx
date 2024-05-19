@@ -32,6 +32,7 @@ function Calendar() {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
+        padding: "0px 50px",
       }}
     >
       <S.rowScheduler>
