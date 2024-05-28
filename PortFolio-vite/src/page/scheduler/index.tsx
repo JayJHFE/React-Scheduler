@@ -12,11 +12,25 @@ export default function Scheduler() {
         메인컨테이너
         <Calendar />
         <S.innerContainer>
+          <div style={{ color: "blue", display: "flex", flexDirection: "row" }}>
+            <div style={{ color: "blue" }}>차량</div>
+            {Array.from({ length: 24 }, (_, i) => (
+              <div
+                style={{
+                  backgroundColor: "red",
+                  width: "400px",
+                  border: "1px solid black",
+                }}
+                key={i}
+              >
+                {i}
+              </div>
+            ))}
+          </div>
           {data &&
             data[0].map((vehicle) => (
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div></div>
-                <div style={{ color: "blue" }}>차량</div>
                 <div
                   style={{ backgroundColor: "blue", width: "400px" }}
                   key={vehicle.id}
