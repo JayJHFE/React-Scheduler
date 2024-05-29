@@ -13,7 +13,16 @@ export default function Scheduler() {
         <Calendar />
         <S.innerContainer>
           <div style={{ color: "blue", display: "flex", flexDirection: "row" }}>
-            <div style={{ color: "blue" }}>차량</div>
+            <div
+              style={{
+                color: "blue",
+                display: "flex",
+                flexDirection: "row",
+                width: "400px",
+              }}
+            >
+              차량
+            </div>
             {Array.from({ length: 24 }, (_, i) => (
               <div
                 style={{
