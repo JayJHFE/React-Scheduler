@@ -55,7 +55,20 @@ export default function Scheduler() {
                     }}
                     key={i}
                   >
-                    {i}
+                    <div style={{ display: "flex", flexDirection: "row" }}>
+                      {Array.from({ length: 60 }, (_, i) => (
+                        <div
+                          style={{
+                            backgroundColor: "red",
+                            width: "1px",
+                            border: "1px solid black",
+                          }}
+                          key={i}
+                        >
+                          {i}
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 ))}
               </div>
