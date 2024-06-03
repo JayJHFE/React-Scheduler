@@ -55,7 +55,13 @@ export default function Scheduler() {
                     }}
                     key={i}
                   >
-                    <div style={{ display: "flex", flexDirection: "row" }}>
+                    <div
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        width: "60px",
+                      }}
+                    >
                       {Array.from({ length: 60 }, (_, i) => (
                         <div
                           style={{
