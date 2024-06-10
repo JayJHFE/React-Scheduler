@@ -33,6 +33,9 @@ function Calendar() {
         flexDirection: "row",
         justifyContent: "center",
         padding: "0px 50px",
+        width: "1920px",
+        backgroundColor: "blue",
+        overflow: "auto",
       }}
     >
       <S.rowScheduler>
