@@ -9,7 +9,6 @@ export default function Scheduler() {
   return (
     <>
       <S.Container>
-        메인컨테이너
         <Calendar />
         <S.innerContainer>
           <div style={{ color: "blue", display: "flex", flexDirection: "row" }}>
