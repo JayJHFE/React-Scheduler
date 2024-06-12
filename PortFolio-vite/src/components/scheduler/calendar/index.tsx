@@ -35,7 +35,7 @@ function Calendar() {
         padding: "0px 50px",
         width: "1920px",
         backgroundColor: "blue",
-        overflow: "auto",
+        // overflow: "auto",
       }}
     >
       <S.rowScheduler>
