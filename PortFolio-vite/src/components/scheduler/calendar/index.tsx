@@ -35,16 +35,17 @@ function Calendar() {
         padding: "0px 50px",
         width: "1920px",
         backgroundColor: "blue",
-        // overflow: "auto",
       }}
     >
-      <S.rowScheduler>
-        {selectedDate?.map((day, idx) => (
-          <div key={idx}>
-            <DateAndDay day={day.date} date={day.weekdayName} />
-          </div>
-        ))}
-      </S.rowScheduler>
+      <div style={{ overflow: "auto", width: "1000px" }}>
+        <S.rowScheduler>
+          {selectedDate?.map((day, idx) => (
+            <div key={idx}>
+              <DateAndDay day={day.date} date={day.weekdayName} />
+            </div>
+          ))}
+        </S.rowScheduler>
+      </div>
     </div>
   );
 }
