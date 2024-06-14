@@ -9,7 +9,10 @@ export default function Scheduler() {
   return (
     <>
       <S.Container>
-        <Calendar />
+        <div>
+          <div>월 달력</div>
+          <Calendar />
+        </div>
         <S.innerContainer>
           <div style={{ color: "blue", display: "flex", flexDirection: "row" }}>
             <div
