@@ -37,6 +37,7 @@ function Calendar() {
         backgroundColor: "blue",
       }}
     >
+      <div style={{ backgroundColor: "green" }}>월 달력</div>
       <div style={{ overflow: "auto", width: "1000px" }}>
         <S.rowScheduler>
           {selectedDate?.map((day, idx) => (

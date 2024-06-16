@@ -15,7 +15,6 @@ export default function Scheduler() {
             flexDirection: "row",
           }}
         >
-          <div style={{ backgroundColor: "green" }}>월 달력</div>
           <Calendar />
         </div>
         <S.innerContainer>
