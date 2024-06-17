@@ -31,13 +31,13 @@ function Calendar() {
       style={{
         display: "flex",
         flexDirection: "row",
-        justifyContent: "center",
+        justifyContent: "space-between",
         padding: "0px 50px",
         width: "1920px",
         backgroundColor: "blue",
       }}
     >
-      <div style={{ backgroundColor: "green" }}>월 달력</div>
+      <div style={{ backgroundColor: "green", width: "200px" }}>월 달력</div>
       <div style={{ overflow: "auto", width: "1000px" }}>
         <S.rowScheduler>
           {selectedDate?.map((day, idx) => (
