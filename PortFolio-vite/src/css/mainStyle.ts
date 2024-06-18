@@ -10,5 +10,4 @@ export const innerContainer = styled.div`
   width: 1500px;
   background-color: yellow;
   height: 900px;
-  overflow: auto;
 `;

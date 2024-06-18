@@ -43,7 +43,7 @@ export default function Scheduler() {
               </div>
             ))}
           </div>
-          {/* {data &&
+          {data &&
             data[0].map((vehicle) => (
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div></div>
@@ -85,7 +85,7 @@ export default function Scheduler() {
                   </div>
                 ))}
               </div>
-            ))} */}
+            ))}
         </S.innerContainer>
       </S.Container>
     </>
