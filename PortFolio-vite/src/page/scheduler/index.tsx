@@ -13,6 +13,7 @@ export default function Scheduler() {
           style={{
             display: "flex",
             flexDirection: "row",
+            backgroundColor: "yellow",
           }}
         >
           <Calendar />
@@ -85,7 +86,6 @@ export default function Scheduler() {
                 ))}
               </div>
             ))}
-          {/* for문으로 div 24개 생성 */}
           <div>
             좌측 컨테이너
             <div>스케줄러 표기</div>
