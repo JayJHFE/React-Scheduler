@@ -9,16 +9,16 @@ export default function Scheduler() {
   return (
     <>
       <S.Container>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            backgroundColor: "yellow",
-          }}
-        >
-          <Calendar />
-        </div>
         <S.innerContainer>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              backgroundColor: "red",
+            }}
+          >
+            <Calendar />
+          </div>
           <div style={{ color: "blue", display: "flex", flexDirection: "row" }}>
             <div
               style={{
@@ -43,7 +43,7 @@ export default function Scheduler() {
               </div>
             ))}
           </div>
-          {data &&
+          {/* {data &&
             data[0].map((vehicle) => (
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <div></div>
@@ -85,15 +85,7 @@ export default function Scheduler() {
                   </div>
                 ))}
               </div>
-            ))}
-          <div>
-            좌측 컨테이너
-            <div>스케줄러 표기</div>
-          </div>
-          <div>
-            우측 컨테이너
-            <div>일정용 리스트 표기</div>
-          </div>
+            ))} */}
         </S.innerContainer>
       </S.Container>
     </>
