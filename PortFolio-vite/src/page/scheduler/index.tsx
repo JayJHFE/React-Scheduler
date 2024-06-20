@@ -36,7 +36,7 @@ export default function Scheduler() {
               </div>
             ))}
           </div>
-          <div>
+          <div style={{ overflow: "auto" }}>
             {data &&
               data[0].map((vehicle) => (
                 <div
@@ -53,7 +53,7 @@ export default function Scheduler() {
                   >
                     {vehicle.name}
                   </div>
-                  {/* {Array.from({ length: 24 }, (_, i) => (
+                  {Array.from({ length: 24 }, (_, i) => (
                     <div
                       style={{
                         backgroundColor: "red",
@@ -83,7 +83,7 @@ export default function Scheduler() {
                         ))}
                       </div>
                     </div>
-                  ))} */}
+                  ))}
                 </div>
               ))}
           </div>
