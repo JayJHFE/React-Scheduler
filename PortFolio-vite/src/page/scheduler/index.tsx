@@ -53,7 +53,43 @@ export default function Scheduler() {
                   >
                     {vehicle.name}
                   </div>
-                  {Array.from({ length: 24 }, (_, i) => (
+                  <div style={{ display: "flex" }}>
+                    {Array.from({ length: 24 }, (_, i) => (
+                      <div
+                        key={i}
+                        style={{
+                          backgroundColor: "red",
+                          width: "400px",
+                          border: "1px solid black",
+                          display: "flex",
+                          flexDirection: "column",
+                        }}
+                      >
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "row",
+                            overflowX: "auto",
+                          }}
+                        >
+                          {Array.from({ length: 60 }, (_, j) => (
+                            <div
+                              key={j}
+                              style={{
+                                backgroundColor: "red",
+                                width: "1px",
+                                height: "20px", // 높이를 적절히 설정
+                                border: "1px solid black",
+                              }}
+                            >
+                              {j}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  {/* {Array.from({ length: 24 }, (_, i) => (
                     <div
                       style={{
                         backgroundColor: "red",
@@ -83,7 +119,7 @@ export default function Scheduler() {
                         ))}
                       </div>
                     </div>
-                  ))}
+                  ))} */}
                 </div>
               ))}
           </div>
