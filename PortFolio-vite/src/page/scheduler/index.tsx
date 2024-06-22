@@ -36,7 +36,7 @@ export default function Scheduler() {
               </div>
             ))}
           </div>
-          <div style={{ overflow: "auto" }}>
+          <div>
             {data &&
               data[0].map((vehicle) => (
                 <div
