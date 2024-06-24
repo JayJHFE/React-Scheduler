@@ -7,122 +7,13 @@ export default function Scheduler() {
   const hoursArray = Array.from({ length: 24 }, (_, i) =>
     i === 0 ? "차량" : i
   );
-  console.log(data);
-  console.log(typeof data);
   return (
     <>
       <S.Container>
         <S.innerContainer>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              backgroundColor: "red",
-            }}
-          >
+          <S.CalendarContainer>
             <Calendar />
-          </div>
-          <div style={{ color: "blue", display: "flex", flexDirection: "row" }}>
-            {hoursArray.map((hour, index) => (
-              <div
-                style={{
-                  backgroundColor: "red",
-                  width: index === 0 ? "600px" : "400px",
-                  border: "1px solid black",
-                }}
-                key={index}
-              >
-                {hour}
-              </div>
-            ))}
-          </div>
-          <div style={{ backgroundColor: "black", overflow: "auto" }}>
-            {data &&
-              data[0].map((vehicle) => (
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    backgroundColor: "yellow",
-                  }}
-                >
-                  <div></div>
-                  <div
-                    style={{ backgroundColor: "blue", width: "600px" }}
-                    key={vehicle.id}
-                  >
-                    {vehicle.name}
-                  </div>
-                  <div style={{ display: "flex" }}>
-                    {Array.from({ length: 24 }, (_, i) => (
-                      <div
-                        key={i}
-                        style={{
-                          backgroundColor: "red",
-                          width: "400px",
-                          border: "1px solid black",
-                          display: "flex",
-                          flexDirection: "column",
-                        }}
-                      >
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            overflowX: "auto",
-                          }}
-                        >
-                          {Array.from({ length: 60 }, (_, j) => (
-                            <div
-                              key={j}
-                              style={{
-                                backgroundColor: "red",
-                                width: "1px",
-                                height: "20px", // 높이를 적절히 설정
-                                border: "1px solid black",
-                              }}
-                            >
-                              {j}
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  {/* {Array.from({ length: 24 }, (_, i) => (
-                    <div
-                      style={{
-                        backgroundColor: "red",
-                        width: "600px",
-                        border: "1px solid black",
-                      }}
-                      key={i}
-                    >
-                      <div
-                        style={{
-                          display: "flex",
-                          flexDirection: "row",
-                          width: "60px",
-                        }}
-                      >
-                        {Array.from({ length: 60 }, (_, i) => (
-                          <div
-                            style={{
-                              backgroundColor: "red",
-                              width: "1px",
-                              border: "1px solid black",
-                            }}
-                            key={i}
-                          >
-                            {i}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ))} */}
-                </div>
-              ))}
-          </div>
+          </S.CalendarContainer>
         </S.innerContainer>
       </S.Container>
     </>
