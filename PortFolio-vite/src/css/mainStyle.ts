@@ -11,7 +11,7 @@ export const innerContainer = styled.div`
   background-color: yellow;
   height: 900px;
 `;
-export const CalendarContainer = styled.div`
+export const calendarContainer = styled.div`
   display: "flex";
   flex-direction: "row";
   background-color: "red";

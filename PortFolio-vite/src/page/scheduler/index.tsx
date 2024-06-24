@@ -11,9 +11,9 @@ export default function Scheduler() {
     <>
       <S.Container>
         <S.innerContainer>
-          <S.CalendarContainer>
+          <S.calendarContainer>
             <Calendar />
-          </S.CalendarContainer>
+          </S.calendarContainer>
         </S.innerContainer>
       </S.Container>
     </>
