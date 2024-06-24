@@ -33,7 +33,6 @@ function Calendar() {
         flexDirection: "row",
         justifyContent: "space-between",
         padding: "0px 50px",
-        width: "1920px",
         backgroundColor: "blue",
       }}
     >
