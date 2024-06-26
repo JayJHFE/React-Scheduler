@@ -15,3 +15,6 @@ export const calendarContainer = styled.div`
   display: "flex";
   flex-direction: "row";
 `;
+export const schedulerContainer = styled.div`
+  background-color: blue;
+`;

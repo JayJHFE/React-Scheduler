@@ -14,6 +14,7 @@ export default function Scheduler() {
           <S.calendarContainer>
             <Calendar />
           </S.calendarContainer>
+          <S.schedulerContainer></S.schedulerContainer>
           {/* <div>
             <div
               style={{ color: "blue", display: "flex", flexDirection: "row" }}
