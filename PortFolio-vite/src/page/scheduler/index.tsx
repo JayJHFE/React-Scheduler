@@ -1,6 +1,7 @@
 import Calendar from "../../components/scheduler/calendar";
 import * as S from "../../css/mainStyle";
 import jsonData from "../../../public/test.json";
+import SchedulerTable from "../../components/scheduler/table";
 
 export default function Scheduler() {
   const data = jsonData.vehiclces;
@@ -14,7 +15,9 @@ export default function Scheduler() {
           <S.calendarContainer>
             <Calendar />
           </S.calendarContainer>
-          <S.schedulerContainer></S.schedulerContainer>
+          <S.schedulerContainer>
+            <SchedulerTable />
+          </S.schedulerContainer>
           {/* <div>
             <div
               style={{ color: "blue", display: "flex", flexDirection: "row" }}
