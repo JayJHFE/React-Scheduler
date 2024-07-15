@@ -10,7 +10,7 @@ function SchedulerTable() {
           <div
             style={{
               backgroundColor: "red",
-              width: index === 0 ? "300px" : "300px",
+              width: "300px",
               border: "1px solid black",
             }}
             key={index}
