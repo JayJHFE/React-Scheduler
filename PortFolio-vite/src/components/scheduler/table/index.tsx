@@ -1,7 +1,7 @@
 function SchedulerTable() {
-  const hoursArray = Array.from({ length: 24 }, (_, i) =>
-    i === 0 ? "차량" : i
-  );
+  //25개의 시간을 만들어서 차량을 넣어준다.
+
+  const hoursArray = Array.from({ length: 25 }, (_, i) => i);
   return (
     <>
       <div style={{ color: "blue", display: "flex", flexDirection: "row" }}>
@@ -10,7 +10,7 @@ function SchedulerTable() {
           <div
             style={{
               backgroundColor: "red",
-              width: "300px",
+              width: "500px",
               border: "1px solid black",
             }}
             key={index}
