@@ -4,13 +4,20 @@ function SchedulerTable() {
   const hoursArray = Array.from({ length: 25 }, (_, i) => i);
   return (
     <>
-      <div style={{ color: "blue", display: "flex", flexDirection: "row" }}>
+      <div
+        style={{
+          width: "3000px",
+          color: "blue",
+          display: "flex",
+          flexDirection: "row",
+        }}
+      >
         {/* 사이즈가 왜 실제 스케줄러처럼안되는지 확인*/}
         {hoursArray.map((hour, index) => (
           <div
             style={{
               backgroundColor: "red",
-              width: "500px",
+              width: "1000px",
               border: "1px solid black",
             }}
             key={index}
