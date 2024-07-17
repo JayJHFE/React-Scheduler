@@ -6,7 +6,7 @@ function SchedulerTable() {
     <>
       <div
         style={{
-          width: "3000px",
+          width: "4500px",
           color: "blue",
           display: "flex",
           flexDirection: "row",
@@ -17,7 +17,7 @@ function SchedulerTable() {
           <div
             style={{
               backgroundColor: "red",
-              width: "1000px",
+              width: "180px",
               border: "1px solid black",
             }}
             key={index}
