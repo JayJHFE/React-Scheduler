@@ -18,6 +18,7 @@ function SchedulerTable() {
             style={{
               backgroundColor: "red",
               width: "180px",
+              height: "30px",
               border: "1px solid black",
             }}
             key={index}
