@@ -12,7 +12,7 @@ function SchedulerTable() {
           flexDirection: "row",
         }}
       >
-        {/* 사이즈가 왜 실제 스케줄러처럼안되는지 확인*/}
+        {/* hourArray 를 data의 길이만큼 생성*/}
         {hoursArray.map((hour, index) => (
           <div
             style={{
