@@ -2,6 +2,7 @@ import Calendar from "../../components/scheduler/calendar";
 import * as S from "../../css/mainStyle";
 import jsonData from "../../../public/test.json";
 import SchedulerTable from "../../components/scheduler/table";
+import SchedulerLeftTable from "../../components/scheduler/leftTable";
 
 export default function Scheduler() {
   const data = jsonData.vehiclces;
