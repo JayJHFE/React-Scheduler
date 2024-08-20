@@ -5,6 +5,18 @@ function SchedulerTable() {
   const data = 5;
   return (
     <>
+      {/* 세로로 위에 덮는 div 를 data의 길이만큼 생성 */}
+      {Array.from({ length: data }, (_, i) => (
+        <div
+          key={i}
+          style={{
+            width: "4500px",
+            color: "blue",
+            display: "flex",
+            flexDirection: "row",
+          }}
+        ></div>
+      ))}
       {/* div 를 data의 길이만큼 생성 */}
       {Array.from({ length: data }, (_, i) => (
         <div
