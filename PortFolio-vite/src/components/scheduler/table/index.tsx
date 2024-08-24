@@ -18,8 +18,9 @@ function SchedulerTable() {
               backgroundColor: "blue",
               display: "flex",
               flexDirection: "column",
-              position: "absolute",
+              position: "sticky",
               top: `${i * 30}px`, // 각 div가 서로 다른 위치에 놓이도록 조정
+              left: 0, // 좌우 스크롤에도 고정/ 각 div가 서로 다른 위치에 놓이도록 조정
             }}
           >
             1
