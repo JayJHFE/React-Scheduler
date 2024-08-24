@@ -18,4 +18,5 @@ export const calendarContainer = styled.div`
 export const schedulerContainer = styled.div`
   background-color: blue;
   overflow: auto;
+  position: relative;
 `;

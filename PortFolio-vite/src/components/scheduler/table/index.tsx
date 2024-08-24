@@ -6,26 +6,6 @@ function SchedulerTable() {
   return (
     <>
       <div style={{ position: "relative" }}>
-        {/* 세로로 위에 덮는 div 를 data의 길이만큼 생성 */}
-        {/* div를 absolute로 설정하여 겹치게 만든다. */}
-        {Array.from({ length: data }, (_, i) => (
-          <div
-            key={i}
-            style={{
-              zIndex: 100,
-              width: "180px",
-              height: "30px",
-              backgroundColor: "blue",
-              display: "flex",
-              flexDirection: "column",
-              position: "sticky",
-              top: `${i * 30}px`, // 각 div가 서로 다른 위치에 놓이도록 조정
-              left: 0, // 좌우 스크롤에도 고정/ 각 div가 서로 다른 위치에 놓이도록 조정
-            }}
-          >
-            1
-          </div>
-        ))}
         {/* div 를 data의 길이만큼 생성 */}
         {Array.from({ length: data }, (_, i) => (
           <div

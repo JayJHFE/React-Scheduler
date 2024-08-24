@@ -1,15 +1,27 @@
 function SchedulerLeftTable() {
+  const data = 5;
   return (
     <>
-      <div
-        style={{
-          color: "orange",
-          display: "flex",
-          flexDirection: "row",
-          width: "500px",
-          zIndex: 9999,
-        }}
-      ></div>
+      <div style={{ position: "sticky" }}>
+        {Array.from({ length: data }, (_, i) => (
+          <div
+            key={i}
+            style={{
+              zIndex: 100,
+              width: "180px",
+              height: "30px",
+              backgroundColor: "blue",
+              display: "flex",
+              flexDirection: "column",
+              position: "sticky",
+              top: `${i * 30}px`,
+              left: 0, // 각 div가 서로 다른 위치에 놓이도록 조정
+            }}
+          >
+            1
+          </div>
+        ))}
+      </div>
     </>
   );
 }

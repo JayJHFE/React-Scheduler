@@ -18,6 +18,7 @@ export default function Scheduler() {
           </S.calendarContainer>
           <S.schedulerContainer>
             <SchedulerTable />
+            <SchedulerLeftTable />
           </S.schedulerContainer>
           {/* <div>
             <div
