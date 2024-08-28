@@ -17,6 +17,22 @@ export const calendarContainer = styled.div`
 `;
 export const schedulerContainer = styled.div`
   background-color: blue;
+  width: 100%;
   overflow: auto;
+  display: flex;
+  position: relative;
+`;
+export const SchedulerLeftTableContainer = styled.div`
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  width: 180px;
+  flex-shrink: 0;
+`;
+export const SchedulerTableContainer = styled.div`
+  overflow-x: auto;
+  flex-grow: 1;
   position: relative;
 `;

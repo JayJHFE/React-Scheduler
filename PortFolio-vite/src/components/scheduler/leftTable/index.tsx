@@ -2,7 +2,7 @@ function SchedulerLeftTable() {
   const data = 5;
   return (
     <>
-      <div style={{ position: "sticky" }}>
+      <div style={{ position: "sticky", top: 0, left: 0, zIndex: 100 }}>
         {Array.from({ length: data }, (_, i) => (
           <div
             key={i}

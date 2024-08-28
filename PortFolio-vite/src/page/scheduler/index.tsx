@@ -1,5 +1,5 @@
 import Calendar from "../../components/scheduler/calendar";
-import * as S from "../../css/mainStyle";
+import * as C from "../../css/mainStyle";
 import jsonData from "../../../public/test.json";
 import SchedulerTable from "../../components/scheduler/table";
 import SchedulerLeftTable from "../../components/scheduler/leftTable";
@@ -11,15 +11,19 @@ export default function Scheduler() {
   );
   return (
     <>
-      <S.Container>
-        <S.innerContainer>
-          <S.calendarContainer>
+      <C.Container>
+        <C.innerContainer>
+          <C.calendarContainer>
             <Calendar />
-          </S.calendarContainer>
-          <S.schedulerContainer>
-            <SchedulerTable />
-            <SchedulerLeftTable />
-          </S.schedulerContainer>
+          </C.calendarContainer>
+          <C.schedulerContainer>
+            <C.SchedulerTableContainer>
+              <SchedulerTable />
+            </C.SchedulerTableContainer>
+            <C.SchedulerLeftTableContainer>
+              <SchedulerLeftTable />
+            </C.SchedulerLeftTableContainer>
+          </C.schedulerContainer>
           {/* <div>
             <div
               style={{ color: "blue", display: "flex", flexDirection: "row" }}
@@ -93,8 +97,8 @@ export default function Scheduler() {
                 ))}
             </div>
           </div> */}
-        </S.innerContainer>
-      </S.Container>
+        </C.innerContainer>
+      </C.Container>
     </>
   );
 }
