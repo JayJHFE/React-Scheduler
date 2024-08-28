@@ -17,12 +17,12 @@ export default function Scheduler() {
             <Calendar />
           </C.calendarContainer>
           <C.schedulerContainer>
-            <C.SchedulerTableContainer>
-              <SchedulerTable />
-            </C.SchedulerTableContainer>
             <C.SchedulerLeftTableContainer>
               <SchedulerLeftTable />
             </C.SchedulerLeftTableContainer>
+            <C.SchedulerTableContainer>
+              <SchedulerTable />
+            </C.SchedulerTableContainer>
           </C.schedulerContainer>
           {/* <div>
             <div
