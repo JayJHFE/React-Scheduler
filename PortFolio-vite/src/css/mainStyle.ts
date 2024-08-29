@@ -5,6 +5,7 @@ export const Container = styled.div`
   width: 1920px;
   height: 1080px;
   background-color: green;
+  display: flex;
 `;
 export const innerContainer = styled.div`
   width: 1500px;
@@ -23,7 +24,7 @@ export const schedulerContainer = styled.div`
   overflow-x: auto; /* 스크롤을 schedulerContainer에 적용 */
   position: relative;
 `;
-export const SchedulerLeftTableContainer = styled.div`
+export const schedulerLeftTableContainer = styled.div`
   position: sticky;
   top: 0;
   left: 0;
@@ -32,8 +33,12 @@ export const SchedulerLeftTableContainer = styled.div`
   width: 180px;
   flex-shrink: 0;
 `;
-export const SchedulerTableContainer = styled.div`
+export const schedulerTableContainer = styled.div`
   flex-grow: 1;
   position: relative;
   overflow: visible;
+`;
+export const leftContainer = styled.div`
+  width: calc(100% - 1500px);
+  height: 900px;
 `;

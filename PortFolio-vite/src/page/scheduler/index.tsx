@@ -12,14 +12,15 @@ export default function Scheduler() {
             <Calendar />
           </C.calendarContainer>
           <C.schedulerContainer>
-            <C.SchedulerLeftTableContainer>
+            <C.schedulerLeftTableContainer>
               <SchedulerLeftTable />
-            </C.SchedulerLeftTableContainer>
-            <C.SchedulerTableContainer>
+            </C.schedulerLeftTableContainer>
+            <C.schedulerTableContainer>
               <SchedulerTable />
-            </C.SchedulerTableContainer>
+            </C.schedulerTableContainer>
           </C.schedulerContainer>
         </C.innerContainer>
+        <C.leftContainer>1</C.leftContainer>
       </C.Container>
     </>
   );
