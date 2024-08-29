@@ -16,10 +16,11 @@ export const calendarContainer = styled.div`
   flex-direction: "row";
 `;
 export const schedulerContainer = styled.div`
-  background-color: blue;
-  width: 100%;
-  overflow: auto;
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  overflow-x: auto; /* 스크롤을 schedulerContainer에 적용 */
   position: relative;
 `;
 export const SchedulerLeftTableContainer = styled.div`
@@ -32,7 +33,7 @@ export const SchedulerLeftTableContainer = styled.div`
   flex-shrink: 0;
 `;
 export const SchedulerTableContainer = styled.div`
-  overflow-x: auto;
   flex-grow: 1;
   position: relative;
+  overflow: visible;
 `;
