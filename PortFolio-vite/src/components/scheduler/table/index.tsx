@@ -1,12 +1,11 @@
 function SchedulerTable() {
-  //25개의 시간을 만들어서 차량을 넣어준다.
-
   const hoursArray = Array.from({ length: 25 }, (_, i) => i);
   const data = 5;
+
   return (
     <>
       <div style={{ position: "relative" }}>
-        {/* div 를 data의 길이만큼 생성 */}
+        {/* div를 data의 길이만큼 생성 */}
         {Array.from({ length: data }, (_, i) => (
           <div
             key={i}
@@ -17,17 +16,29 @@ function SchedulerTable() {
               flexDirection: "row",
             }}
           >
-            {hoursArray.map((hour, index) => (
+            {hoursArray.map((index) => (
               <div
+                key={index}
                 style={{
                   backgroundColor: "red",
                   width: "180px",
                   height: "30px",
                   border: "1px solid black",
+                  display: "flex",
+                  flexDirection: "row",
                 }}
-                key={index}
               >
-                {hour}
+                {Array.from({ length: 60 }, (_, minuteIndex) => (
+                  <div
+                    key={minuteIndex}
+                    style={{
+                      backgroundColor: "yellow",
+                      width: "3px",
+                      height: "100%",
+                      borderRight: "1px solid black",
+                    }}
+                  />
+                ))}
               </div>
             ))}
           </div>
