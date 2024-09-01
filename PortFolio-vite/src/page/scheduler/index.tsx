@@ -2,6 +2,7 @@ import Calendar from "../../components/scheduler/calendar";
 import * as C from "../../css/mainStyle";
 import SchedulerTable from "../../components/scheduler/table";
 import SchedulerLeftTable from "../../components/scheduler/leftTable";
+import RightUpperContainer from "../../components/scheduler/right/rightUpperContainer";
 
 export default function Scheduler() {
   return (
@@ -20,7 +21,9 @@ export default function Scheduler() {
             </C.schedulerTableContainer>
           </C.schedulerContainer>
         </C.innerContainer>
-        <C.leftContainer>1</C.leftContainer>
+        <C.rightContainer>
+          <RightUpperContainer />
+        </C.rightContainer>
       </C.Container>
     </>
   );

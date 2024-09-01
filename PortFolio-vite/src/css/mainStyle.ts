@@ -38,7 +38,7 @@ export const schedulerTableContainer = styled.div`
   position: relative;
   overflow: visible;
 `;
-export const leftContainer = styled.div`
+export const rightContainer = styled.div`
   width: calc(100% - 1500px);
   height: 900px;
 `;
