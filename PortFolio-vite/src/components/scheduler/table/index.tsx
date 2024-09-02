@@ -18,32 +18,71 @@ function SchedulerTable() {
               flexDirection: "row",
             }}
           >
-            {hoursArray.map((index) => (
-              // i == 0 ? () : ()
-              <div
-                key={index}
-                style={{
-                  backgroundColor: "red",
-                  width: "180px",
-                  height: "30px",
-                  border: "1px solid black",
-                  display: "flex",
-                  flexDirection: "row",
-                }}
-              >
-                {Array.from({ length: 60 }, (_, minuteIndex) => (
+            {hoursArray.map(
+              (index) =>
+                i == 0 ? (
                   <div
-                    key={minuteIndex}
+                    key={index}
                     style={{
-                      backgroundColor: "yellow",
-                      width: "3px",
-                      height: "100%",
-                      borderRight: "1px solid black",
+                      backgroundColor: "red",
+                      width: "180px",
+                      height: "30px",
+                      border: "1px solid black",
+                      display: "flex",
+                      flexDirection: "row",
                     }}
-                  />
-                ))}
-              </div>
-            ))}
+                  >
+                    시간들어가
+                  </div>
+                ) : (
+                  <div
+                    key={index}
+                    style={{
+                      backgroundColor: "red",
+                      width: "180px",
+                      height: "30px",
+                      border: "1px solid black",
+                      display: "flex",
+                      flexDirection: "row",
+                    }}
+                  >
+                    {Array.from({ length: 60 }, (_, minuteIndex) => (
+                      <div
+                        key={minuteIndex}
+                        style={{
+                          backgroundColor: "yellow",
+                          width: "3px",
+                          height: "100%",
+                          borderRight: "1px solid black",
+                        }}
+                      />
+                    ))}
+                  </div>
+                )
+              // <div
+              //   key={index}
+              //   style={{
+              //     backgroundColor: "red",
+              //     width: "180px",
+              //     height: "30px",
+              //     border: "1px solid black",
+              //     display: "flex",
+              //     flexDirection: "row",
+              //   }}
+              // >
+              //   {Array.from({ length: 60 }, (_, minuteIndex) => (
+              //     <div
+              //       key={minuteIndex}
+              //       style={{
+              //         backgroundColor: "yellow",
+              //         width: "3px",
+              //         height: "100%",
+              //         borderRight: "1px solid black",
+              //       }}
+              //     />
+              //   ))}
+              // </div>
+            )}
           </div>
         ))}
       </div>
