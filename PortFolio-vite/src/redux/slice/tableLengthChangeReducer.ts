@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // 메인 페이지 렌더링을 위한 createSlice 생성
 export const tableLengthChangeReducer = createSlice({
-  name: "changeComponent",
+  name: "tableLengthChange",
   initialState: {
     //초기값 0
     value: 0,
