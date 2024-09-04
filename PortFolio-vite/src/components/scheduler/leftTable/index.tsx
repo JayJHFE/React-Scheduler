@@ -1,4 +1,16 @@
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../../redux/store/store";
+import {
+  increase,
+  decrease,
+} from "../../../redux/slice/tableLengthChangeReducer";
+
 function SchedulerLeftTable() {
+  const value = useSelector(
+    (state: RootState) => state.tableLengthChange.value
+  ); // 현재 상태 조회
+  const dispatch = useDispatch(); // 디스패치 생성
   {
     /*항상 실제 데이터보다 1크게작성해줘야함 */
   }
