@@ -1,6 +1,13 @@
+import { useSelector, useDispatch } from "react-redux";
+import { RootState } from "../../../redux/store/store";
+
 function SchedulerTable() {
+  const value = useSelector(
+    (state: RootState) => state.tableLengthChange.value
+  ); // 현재 상태 조회
+  const dispatch = useDispatch(); //
   const hoursArray = Array.from({ length: 25 }, (_, i) => i);
-  const data = 6;
+  const data = value;
 
   return (
     <>

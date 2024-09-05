@@ -11,7 +11,7 @@ function SchedulerLeftTable() {
   {
     /*항상 실제 데이터보다 1크게작성해줘야함 */
   }
-  const data = 6;
+  const data = value;
   return (
     <>
       {/* <div style={{ position: "sticky", top: 0, left: 0, zIndex: 100 }}> */}
@@ -32,7 +32,7 @@ function SchedulerLeftTable() {
                 left: 0,
               }}
             >
-              {value}
+              할일목록
             </div>
           ) : (
             <div

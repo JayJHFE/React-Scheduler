@@ -5,7 +5,7 @@ export const tableLengthChangeReducer = createSlice({
   name: "tableLengthChange",
   initialState: {
     //초기값 0
-    value: 0,
+    value: 1,
   },
   reducers: {
     increase: (state) => {

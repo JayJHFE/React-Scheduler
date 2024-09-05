@@ -10,7 +10,7 @@ function RightUpperContainer() {
         display: "flex",
         flexDirection: "column",
         height: "300px",
-        backgroundColor: "blue",
+        backgroundColor: "orange",
         alignItems: "center",
       }}
     >
