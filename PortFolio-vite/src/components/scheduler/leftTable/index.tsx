@@ -32,7 +32,7 @@ function SchedulerLeftTable() {
                 left: 0,
               }}
             >
-              할일목록
+              {value}
             </div>
           ) : (
             <div

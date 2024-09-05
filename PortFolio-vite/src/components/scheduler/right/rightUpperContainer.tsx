@@ -1,11 +1,7 @@
-import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../../redux/store/store";
+import { useDispatch } from "react-redux";
 import { increase } from "../../../redux/slice/tableLengthChangeReducer";
 
 function RightUpperContainer() {
-  const value = useSelector(
-    (state: RootState) => state.tableLengthChange.value
-  ); // 현재 상태 조회
   const dispatch = useDispatch();
   return (
     <div
@@ -25,7 +21,7 @@ function RightUpperContainer() {
       />
       <button
         className="right-upper-container__button"
-        onClick={() => dispat}
+        onClick={() => dispatch(increase())}
       ></button>
     </div>
   );
