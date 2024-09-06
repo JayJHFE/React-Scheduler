@@ -67,18 +67,21 @@ function SchedulerLeftTable() {
             >
               {row.name}
               {focusedRow === i && (
-              <button
+              <div
                 style={{
                   marginLeft: "10px",
+                  height: "30px",
                   backgroundColor: "red",
                   color: "white",
                   border: "none",
                   cursor: "pointer",
+                  transform: "translateY(-90%)",
+                  zIndex: 200,
                 }}
                 onClick={() => handleDelete(row.id)} // 삭제 버튼 클릭 시 row 삭제
               >
                 삭제
-              </button>
+              </div>
             )}
             </div>
           )
