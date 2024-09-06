@@ -74,7 +74,6 @@ function SchedulerLeftTable() {
                   color: "white",
                   border: "none",
                   cursor: "pointer",
-                  bottom: "20px"
                 }}
                 onClick={() => handleDelete(row.id)} // 삭제 버튼 클릭 시 row 삭제
               >
