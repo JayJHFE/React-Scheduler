@@ -1,22 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../redux/store/store";
-import { decrease } from "../../../redux/slice/tableLengthChangeReducer";
+import { removeRow, addRow } from "../../../redux/slice/tableLengthChangeReducer";
 
 function SchedulerLeftTable() {
-  const value = useSelector(
-    (state: RootState) => state.tableLengthChange.value
+  const rows = useSelector(
+    (state: RootState) => state.tableLengthChange.rows
   ); // 현재 상태 조회
   const dispatch = useDispatch(); // 디스패치 생성
-  {
-    /*항상 실제 데이터보다 1크게작성해줘야함 */
-  }
-  const data = value;
+  const [focusedRow, setFocusedRow] = useState<number | null>(null);
+
+  const handleMouseEnter = (index: number) => {
+    setFocusedRow(index); // 마우스가 row에 들어오면 focus 설정
+  };
+
+  const handleMouseLeave = () => {
+    setFocusedRow(null); // 마우스가 나가면 focus 해제
+  };
+
+  const handleDelete = (id: number) => {
+    dispatch(removeRow(id)); // 삭제 버튼 클릭 시 row 삭제
+  };
+
+  const handleAddRow = () => {
+    dispatch(addRow()); // 새로운 row 추가
+  };
+
   return (
     <>
       {/* <div style={{ position: "sticky", top: 0, left: 0, zIndex: 100 }}> */}
       <div>
-        {Array.from({ length: data }, (_, i) =>
+        {rows.map((row, i) =>
           i === 0 ? (
             <div
               key={i}
@@ -36,7 +50,9 @@ function SchedulerLeftTable() {
             </div>
           ) : (
             <div
-              key={i}
+              key={row.id}
+              onMouseEnter={() => handleMouseEnter(i)}
+              onMouseLeave={handleMouseLeave}
               style={{
                 zIndex: 100,
                 width: "180px",
@@ -49,7 +65,22 @@ function SchedulerLeftTable() {
                 left: 0, // 각 div가 서로 다른 위치에 놓이도록 조정
               }}
             >
-              1
+              {row.name}
+              {focusedRow === i && (
+              <button
+                style={{
+                  marginLeft: "10px",
+                  backgroundColor: "red",
+                  color: "white",
+                  border: "none",
+                  cursor: "pointer",
+                  bottom: "20px"
+                }}
+                onClick={() => handleDelete(row.id)} // 삭제 버튼 클릭 시 row 삭제
+              >
+                삭제
+              </button>
+            )}
             </div>
           )
         )}

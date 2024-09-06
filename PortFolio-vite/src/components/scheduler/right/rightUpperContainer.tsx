@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { increase } from "../../../redux/slice/tableLengthChangeReducer";
+import { addRow } from "../../../redux/slice/tableLengthChangeReducer";
 
 function RightUpperContainer() {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ function RightUpperContainer() {
       />
       <button
         className="right-upper-container__button"
-        onClick={() => dispatch(increase())}
+        onClick={() => dispatch(addRow())}
       ></button>
     </div>
   );

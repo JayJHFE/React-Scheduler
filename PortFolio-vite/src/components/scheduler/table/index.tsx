@@ -1,20 +1,18 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store/store";
 
 function SchedulerTable() {
-  const value = useSelector(
-    (state: RootState) => state.tableLengthChange.value
+  const rows = useSelector(
+    (state: RootState) => state.tableLengthChange.rows
   ); // 현재 상태 조회
-  const dispatch = useDispatch(); //
   const hoursArray = Array.from({ length: 25 }, (_, i) => i);
-  const data = value;
 
   return (
     <>
       <div style={{ position: "relative" }}>
         {/* div를 data의 길이만큼 생성 */}
         {/* 첫번째 div만 다른 이름을 가진 div로 생성 */}
-        {Array.from({ length: data }, (_, i) => (
+        {rows.map((_, i) => (
           // i == 0 ? () : ()
           <div
             key={i}
