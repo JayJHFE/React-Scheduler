@@ -5,6 +5,17 @@ import { useState } from "react";
 function RightUpperContainer() {
   const [inputValue, setInputValue] = useState("");
   const dispatch = useDispatch();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(e.target.value); // 입력값을 업데이트
+  };
+
+  const handleAddRow = () => {
+    if (inputValue.trim()) {
+      dispatch(addRow({ name: inputValue })); // 입력값을 Redux 액션으로 전달
+      setInputValue(""); // 입력값 초기화
+    }
+  };
   return (
     <div
       className="right-upper-container"
@@ -20,10 +31,11 @@ function RightUpperContainer() {
       <input
         className="right-upper-container__input"
         style={{ width: "200px" }}
+        onChange={handleInputChange}
       />
       <button
         className="right-upper-container__button"
-        onClick={() => dispatch(addRow())}
+        onClick={() => handleAddRow()}
       ></button>
     </div>
   );
