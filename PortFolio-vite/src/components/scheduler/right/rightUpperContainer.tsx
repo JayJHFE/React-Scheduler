@@ -1,7 +1,9 @@
 import { useDispatch } from "react-redux";
 import { addRow } from "../../../redux/slice/tableLengthChangeReducer";
+import { useState } from "react";
 
 function RightUpperContainer() {
+  const [inputValue, setInputValue] = useState("");
   const dispatch = useDispatch();
   return (
     <div
