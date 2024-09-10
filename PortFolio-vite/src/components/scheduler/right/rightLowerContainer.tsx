@@ -1,4 +1,4 @@
-function rightLowerContainer() {
+function RightLowerContainer() {
   return (
     <div className="rightLowerContainer">
       <div className="rightLowerContainer__header">
@@ -37,4 +37,4 @@ function rightLowerContainer() {
   );
 }
 
-export default rightLowerContainer;
+export default RightLowerContainer;
