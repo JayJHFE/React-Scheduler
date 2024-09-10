@@ -2,9 +2,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store/store";
 
 function SchedulerTable() {
-  const rows = useSelector(
-    (state: RootState) => state.tableLengthChange.rows
-  ); // 현재 상태 조회
+  const rows = useSelector((state: RootState) => state.tableLengthChange.rows); // 현재 상태 조회
   const hoursArray = Array.from({ length: 25 }, (_, i) => i);
 
   return (
@@ -31,7 +29,7 @@ function SchedulerTable() {
                     style={{
                       backgroundColor: "red",
                       width: "180px",
-                      height: "30px",
+                      height: "60px",
                       border: "1px solid black",
                       display: "flex",
                       flexDirection: "row",
@@ -45,7 +43,7 @@ function SchedulerTable() {
                     style={{
                       backgroundColor: "red",
                       width: "180px",
-                      height: "30px",
+                      height: "60px",
                       border: "1px solid black",
                       display: "flex",
                       flexDirection: "row",

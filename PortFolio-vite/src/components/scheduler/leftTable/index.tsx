@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../redux/store/store";
-import { removeRow, addRow } from "../../../redux/slice/tableLengthChangeReducer";
+import {
+  removeRow,
+  // addRow,
+} from "../../../redux/slice/tableLengthChangeReducer";
 
 function SchedulerLeftTable() {
-  const rows = useSelector(
-    (state: RootState) => state.tableLengthChange.rows
-  ); // 현재 상태 조회
+  const rows = useSelector((state: RootState) => state.tableLengthChange.rows); // 현재 상태 조회
   const dispatch = useDispatch(); // 디스패치 생성
   const [focusedRow, setFocusedRow] = useState<number | null>(null);
 
@@ -22,9 +23,9 @@ function SchedulerLeftTable() {
     dispatch(removeRow(id)); // 삭제 버튼 클릭 시 row 삭제
   };
 
-  const handleAddRow = () => {
-    dispatch(addRow()); // 새로운 row 추가
-  };
+  // const handleAddRow = () => {
+  //   dispatch(addRow()); // 새로운 row 추가
+  // };
 
   return (
     <>
@@ -37,7 +38,7 @@ function SchedulerLeftTable() {
               style={{
                 zIndex: 100,
                 width: "180px",
-                height: "30px",
+                height: "60px",
                 backgroundColor: "blue",
                 display: "flex",
                 flexDirection: "column",
@@ -56,7 +57,7 @@ function SchedulerLeftTable() {
               style={{
                 zIndex: 100,
                 width: "180px",
-                height: "30px",
+                height: "60px",
                 backgroundColor: "blue",
                 display: "flex",
                 flexDirection: "column",
@@ -67,22 +68,22 @@ function SchedulerLeftTable() {
             >
               {row.name}
               {focusedRow === i && (
-              <div
-                style={{
-                  marginLeft: "10px",
-                  height: "30px",
-                  backgroundColor: "red",
-                  color: "white",
-                  border: "none",
-                  cursor: "pointer",
-                  transform: "translateY(-90%)",
-                  zIndex: 200,
-                }}
-                onClick={() => handleDelete(row.id)} // 삭제 버튼 클릭 시 row 삭제
-              >
-                삭제
-              </div>
-            )}
+                <div
+                  style={{
+                    marginLeft: "10px",
+                    height: "60px",
+                    backgroundColor: "red",
+                    color: "white",
+                    border: "none",
+                    cursor: "pointer",
+                    transform: "translateY(-90%)",
+                    zIndex: 200,
+                  }}
+                  onClick={() => handleDelete(row.id)} // 삭제 버튼 클릭 시 row 삭제
+                >
+                  삭제
+                </div>
+              )}
             </div>
           )
         )}
