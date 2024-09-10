@@ -5,6 +5,7 @@ import * as S from "../../../css/scheduler.ts";
 dayjs.locale("ko");
 
 function Calendar() {
+  const thisMonth = new Date().getMonth() + 1;
   const getAllDaysAndWeekdaysInMonth = (year: number, month: number) => {
     const startDate = dayjs(`${year}-${month}-01`); // 월의 첫 날
     const daysInMonth = startDate.daysInMonth(); // 해당 월의 일수
@@ -23,7 +24,7 @@ function Calendar() {
     return daysWithWeekdays;
   };
 
-  const selectedDate = getAllDaysAndWeekdaysInMonth(2024, 4);
+  const selectedDate = getAllDaysAndWeekdaysInMonth(2024, thisMonth);
   console.log(selectedDate);
 
   return (
@@ -36,7 +37,18 @@ function Calendar() {
         backgroundColor: "blue",
       }}
     >
-      <div style={{ backgroundColor: "green", width: "200px" }}>월 달력</div>
+      <div
+        style={{
+          backgroundColor: "green",
+          width: "200px",
+          fontSize: "30px",
+          alignItems: "center",
+          justifyContent: "center",
+          paddingTop: "20px",
+        }}
+      >
+        {thisMonth}
+      </div>
       <div style={{ overflow: "auto", width: "1000px" }}>
         <S.rowScheduler>
           {selectedDate?.map((day, idx) => (

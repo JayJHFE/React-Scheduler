@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../redux/store/store";
-import {
-  removeRow,
-  // addRow,
-} from "../../../redux/slice/tableLengthChangeReducer";
+import { removeRow } from "../../../redux/slice/tableLengthChangeReducer";
 
 function SchedulerLeftTable() {
   const rows = useSelector((state: RootState) => state.tableLengthChange.rows); // 현재 상태 조회
@@ -22,10 +19,6 @@ function SchedulerLeftTable() {
   const handleDelete = (id: number) => {
     dispatch(removeRow(id)); // 삭제 버튼 클릭 시 row 삭제
   };
-
-  // const handleAddRow = () => {
-  //   dispatch(addRow()); // 새로운 row 추가
-  // };
 
   return (
     <>
