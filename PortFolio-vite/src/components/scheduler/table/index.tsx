@@ -33,6 +33,8 @@ function SchedulerTable() {
                       border: "1px solid black",
                       display: "flex",
                       flexDirection: "row",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
                   >
                     시간들어가

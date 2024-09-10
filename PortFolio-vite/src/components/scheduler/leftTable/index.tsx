@@ -45,6 +45,8 @@ function SchedulerLeftTable() {
                 position: "sticky",
                 top: 0,
                 left: 0,
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               할일목록
@@ -64,6 +66,8 @@ function SchedulerLeftTable() {
                 position: "sticky",
                 top: `${i * 30}px`,
                 left: 0, // 각 div가 서로 다른 위치에 놓이도록 조정
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               {row.name}
