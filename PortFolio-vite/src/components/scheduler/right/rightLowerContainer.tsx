@@ -5,6 +5,7 @@ function RightLowerContainer() {
         <h1>일정 목록</h1>
       </div>
       <div>1</div>
+      <button>버튼추가</button>
       {/* 리덕스 스토어에 전역변수를 등록해서, 일정 목록을 추가함*/}
       {/* <div className="rightLowerContainer__content">
         <div className="rightLowerContainer__content__item">
