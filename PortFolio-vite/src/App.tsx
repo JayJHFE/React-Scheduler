@@ -1,4 +1,5 @@
 import "./App.css";
+import ScheduleModal from "./components/scheduler/modal/ScheduleModal.tsx";
 import Home from "./page/home/index.tsx";
 import Main from "./page/main/index.tsx";
 import Scheduler from "./page/scheduler/index.tsx";
@@ -13,6 +14,7 @@ function App() {
         <Route path="/scheduler" element={<Scheduler />} />
       </Routes>
       <Link to="/">저를 클릭해 주세요</Link>
+      <ScheduleModal />
     </div>
   );
 }
