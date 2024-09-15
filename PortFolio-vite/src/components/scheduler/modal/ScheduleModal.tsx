@@ -1,9 +1,15 @@
 import Modal from "react-modal";
+import Select from "react-select";
 import { useSelector, useDispatch } from "react-redux";
 import { closeModal } from "../../../redux/slice/modalShowChangeSlice";
 import { RootState } from "../../../redux/store/store";
 // Modal의 root element 설정 (일반적으로 body 하위에 설정)
-Modal.setAppElement("#root");
+
+const options = [
+  { value: "1", label: "Option 1" },
+  { value: "2", label: "Option 2" },
+  { value: "3", label: "Option 3" },
+];
 
 function ScheduleModal() {
   const isModalOpen = useSelector((state: RootState) => state.modal.isOpen); // Redux 상태에서 모달 열림 상태 가져옴
@@ -34,14 +40,16 @@ function ScheduleModal() {
         >
           <h2>세부일정 입력</h2>
           <input type="text" placeholder="일정 이름" />
-          <input type="text" placeholder="일정 내용" />
-          <select>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+          <Select
+            options={options}
+            isSearchable={true} // 검색 가능 여부
+            placeholder="옵션을 선택하세요"
+          />
+          <Select
+            options={options}
+            isSearchable={true} // 검색 가능 여부
+            placeholder="옵션을 선택하세요"
+          />
         </div>
 
         <button onClick={() => dispatch(closeModal())}>닫기</button>

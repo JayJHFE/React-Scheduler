@@ -6,6 +6,7 @@ import RightUpperContainer from "../../components/scheduler/right/rightUpperCont
 import RightLowerContainer from "../../components/scheduler/right/rightLowerContainer";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import ScheduleModal from "../../components/scheduler/modal/ScheduleModal";
 
 export default function Scheduler() {
   return (
@@ -31,6 +32,7 @@ export default function Scheduler() {
           </C.rightContainer>
         </DndProvider>
       </C.Container>
+      <ScheduleModal />
     </>
   );
 }
