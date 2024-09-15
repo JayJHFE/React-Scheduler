@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store/store";
 import DroppableMinuteDiv from "../dropSchedule/DroppableMinuteDiv";
 
@@ -9,13 +9,14 @@ interface DraggedItem {
 
 function SchedulerTable() {
   const rows = useSelector((state: RootState) => state.tableLengthChange.rows); // 현재 상태 조회
-  const schedulerows = useSelector(
-    (state: RootState) => state.newSchedule.schedulerows
-  );
-  const dispatch = useDispatch(); // 디스패치 생성
+  // const schedulerows = useSelector(
+  //   (state: RootState) => state.newSchedule.schedulerows
+  // );
   const hoursArray = Array.from({ length: 25 }, (_, i) => i);
 
-  const handleDrop = (item: DraggedItem) => {};
+  const handleDrop = (item: DraggedItem) => {
+    console.log("Dropped item:", item); // 드래그된 객체의 정보
+  };
 
   return (
     <>

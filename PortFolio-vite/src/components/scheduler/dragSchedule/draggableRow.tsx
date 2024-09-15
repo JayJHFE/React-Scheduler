@@ -16,7 +16,7 @@ interface DraggableRowProps {
 function DraggableRow({ row, index }: DraggableRowProps) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "SCHEDULE", // 고유 타입
-    item: { id: row.id, name: row.name }, // 드래그할 때 넘길 데이터
+    item: { id: row.id, name: row.name, hour: row.hour, minute: row.minute }, // 드래그할 때 넘길 데이터
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
