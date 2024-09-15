@@ -46,6 +46,8 @@ function ScheduleModal() {
         onRequestClose={() => dispatch(closeModal())}
         style={{
           content: {
+            width: "500px",
+            height: "500px",
             top: "50%",
             left: "50%",
             right: "auto",
@@ -68,35 +70,45 @@ function ScheduleModal() {
             placeholder="일정 이름"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            style={{ width: "300px", height: "50px" }}
           />
-          <Select
-            options={hourOptions}
-            isSearchable={true}
-            placeholder="시를 선택하세요"
-            onChange={(selectedOption) =>
-              setSelectedHour(selectedOption?.value ?? null)
-            }
-          />
-          <Select
-            options={minuteOptions}
-            isSearchable={true}
-            placeholder="분을 선택하세요"
-            onChange={(selectedOption) =>
-              setSelectedMinute(selectedOption?.value ?? null)
-            }
-          />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+            }}
+          >
+            <Select
+              options={hourOptions}
+              isSearchable={true}
+              placeholder="시를 선택하세요"
+              onChange={(selectedOption) =>
+                setSelectedHour(selectedOption?.value ?? null)
+              }
+            />
+            <Select
+              options={minuteOptions}
+              isSearchable={true}
+              placeholder="분을 선택하세요"
+              onChange={(selectedOption) =>
+                setSelectedMinute(selectedOption?.value ?? null)
+              }
+            />
+          </div>
+          <div>
+            <button
+              style={{
+                backgroundColor: "red",
+                color: "white",
+              }}
+              onClick={() => dispatch(closeModal())}
+            >
+              닫기
+            </button>
+            <button onClick={() => handleSave()}>저장</button>
+          </div>
         </div>
-
-        <button
-          style={{
-            backgroundColor: "red",
-            color: "white",
-          }}
-          onClick={() => dispatch(closeModal())}
-        >
-          닫기
-        </button>
-        <button onClick={() => handleSave()}>저장</button>
       </Modal>
     </div>
   );
