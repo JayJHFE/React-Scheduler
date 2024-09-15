@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { RootState } from "../../../redux/store/store";
 import { addScheduleRow } from "../../../redux/slice/newScheduleSlice";
+import { useDrag } from "react-dnd";
 
 function RightLowerContainer() {
   const schedulerows = useSelector(
@@ -37,6 +38,9 @@ function RightLowerContainer() {
       ></button>
       <div>
         {schedulerows.map((row, i) => (
+          <DraggableRow key={row.id} row={row} index={i} /> // DraggableRow 컴포넌트를 사용해 드래그 가능하게
+        ))}
+        {/* {schedulerows.map((row, i) => (
           <div
             key={row.id}
             style={{
@@ -55,7 +59,7 @@ function RightLowerContainer() {
           >
             {row.name}
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );
