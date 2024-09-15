@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../../redux/store/store";
-import { removeRow } from "../../../redux/slice/tableLengthChangeReducer";
+import { removeRow } from "../../../redux/slice/tableLengthChangeSlice";
 
 function SchedulerLeftTable() {
   const rows = useSelector((state: RootState) => state.tableLengthChange.rows); // 현재 상태 조회

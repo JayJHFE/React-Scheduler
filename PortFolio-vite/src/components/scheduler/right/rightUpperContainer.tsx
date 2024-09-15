@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { addRow } from "../../../redux/slice/tableLengthChangeReducer";
+import { addRow } from "../../../redux/slice/tableLengthChangeSlice";
 import { useState } from "react";
 
 function RightUpperContainer() {
