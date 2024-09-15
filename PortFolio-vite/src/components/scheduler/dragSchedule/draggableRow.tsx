@@ -11,7 +11,7 @@ interface DraggableRowProps {
   index: number;
 }
 
-function DraggableRow({ row, index }: DraggableRowProp) {
+function DraggableRow({ row, index }: DraggableRowProps) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "SCHEDULE", // 고유 타입
     item: { id: row.id, name: row.name }, // 드래그할 때 넘길 데이터
@@ -35,8 +35,8 @@ function DraggableRow({ row, index }: DraggableRowProp) {
         left: 0,
         alignItems: "center",
         justifyContent: "center",
-        cursor: "move", // 드래그 중임을 알리기 위한 마우스 커서
-        opacity: isDragging ? 0.5 : 1, // 드래그 중일 때 투명하게
+        cursor: "pointer",
+        opacity: isDragging ? 0.5 : 1, //
       }}
     >
       {row.name}

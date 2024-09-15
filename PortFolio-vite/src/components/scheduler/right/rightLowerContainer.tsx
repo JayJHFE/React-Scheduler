@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { RootState } from "../../../redux/store/store";
 import { addScheduleRow } from "../../../redux/slice/newScheduleSlice";
-import { useDrag } from "react-dnd";
+import DraggableRow from "../dragSchedule/draggableRow";
 
 function RightLowerContainer() {
   const schedulerows = useSelector(

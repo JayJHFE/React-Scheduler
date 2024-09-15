@@ -1,9 +1,20 @@
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store/store";
+import DroppableMinuteDiv from "../dropSchedule/DroppableMinuteDiv";
+
+interface DraggedItem {
+  id: number;
+  name: string;
+}
 
 function SchedulerTable() {
   const rows = useSelector((state: RootState) => state.tableLengthChange.rows); // 현재 상태 조회
   const hoursArray = Array.from({ length: 25 }, (_, i) => i);
+
+  const handleDrop = (item: DraggedItem, minuteIndex: number) => {
+    // 드롭된 아이템과 minuteIndex를 통해 필요한 로직 처리
+    console.log(`Dropped item: ${item.name}, minute: ${minuteIndex}`);
+  };
 
   return (
     <>
@@ -51,7 +62,7 @@ function SchedulerTable() {
                       flexDirection: "row",
                     }}
                   >
-                    {Array.from({ length: 60 }, (_, minuteIndex) => (
+                    {/* {Array.from({ length: 60 }, (_, minuteIndex) => (
                       <div
                         key={minuteIndex}
                         style={{
@@ -60,6 +71,13 @@ function SchedulerTable() {
                           height: "100%",
                           borderRight: "1px solid black",
                         }}
+                      />
+                    ))} */}
+                    {Array.from({ length: 60 }, (_, minuteIndex) => (
+                      <DroppableMinuteDiv
+                        key={minuteIndex}
+                        minuteIndex={minuteIndex}
+                        handleDrop={handleDrop} // 드롭 처리 함수 전달
                       />
                     ))}
                   </div>
