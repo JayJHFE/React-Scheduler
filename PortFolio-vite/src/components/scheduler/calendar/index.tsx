@@ -25,7 +25,6 @@ function Calendar() {
   };
 
   const selectedDate = getAllDaysAndWeekdaysInMonth(2024, thisMonth);
-  console.log(selectedDate);
 
   return (
     <div

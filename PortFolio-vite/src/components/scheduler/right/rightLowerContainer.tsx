@@ -40,7 +40,7 @@ function RightLowerContainer() {
       ></button>
       <div>
         {schedulerows.map((row, i) => (
-          <DraggableRow key={row.id} row={row} index={i} /> // DraggableRow 컴포넌트를 사용해 드래그 가능하게
+          <DraggableRow key={row.id} id={row.id} row={row} index={i} /> // DraggableRow 컴포넌트를 사용해 드래그 가능하게
         ))}
         {/* {schedulerows.map((row, i) => (
           <div

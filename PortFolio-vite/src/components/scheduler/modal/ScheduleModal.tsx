@@ -3,11 +3,7 @@ import Select from "react-select";
 import { useSelector, useDispatch } from "react-redux";
 import { closeModal } from "../../../redux/slice/modalShowChangeSlice";
 import { RootState } from "../../../redux/store/store";
-import {
-  addScheduleRow,
-  updateScheduleHour,
-  updateScheduleMinute,
-} from "../../../redux/slice/newScheduleSlice";
+import { addScheduleRow } from "../../../redux/slice/newScheduleSlice";
 import { useState } from "react";
 // Modal의 root element 설정 (일반적으로 body 하위에 설정)
 Modal.setAppElement("#root");
@@ -33,10 +29,10 @@ function ScheduleModal() {
   // 저장 버튼 클릭 시 디스패치
   const handleSave = () => {
     if (name && selectedHour !== null && selectedMinute !== null) {
-      dispatch(addScheduleRow({ name }));
+      dispatch(
+        addScheduleRow({ name, hour: selectedHour, minute: selectedMinute })
+      ); // 필요 시 시간을 따로 업데이트할 수 있도록 리듀서를 호출
       // 필요 시 시간을 따로 업데이트할 수 있도록 리듀서를 호출
-      dispatch(updateScheduleHour({ id: 1, hour: selectedHour }));
-      dispatch(updateScheduleMinute({ id: 1, minute: selectedMinute }));
       dispatch(closeModal()); // 저장 후 모달 닫기
     } else {
       alert("모든 값을 입력해주세요.");

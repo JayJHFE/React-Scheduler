@@ -3,10 +3,13 @@ import { useDrag } from "react-dnd";
 interface Row {
   id: number;
   name: string;
+  hour: number;
+  minute: number;
 }
 
 interface DraggableRowProps {
   row: Row; // row의 타입을 명시적으로 지정
+  id: number;
   index: number;
 }
 
