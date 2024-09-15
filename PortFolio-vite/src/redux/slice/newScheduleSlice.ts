@@ -30,5 +30,5 @@ export const newScheduleSlice = createSlice({
   },
 });
 
-export const { removeRow, addRow } = newScheduleSlice.actions;
+export const { removeScheduleRow, addScheduleRow } = newScheduleSlice.actions;
 export default newScheduleSlice.reducer;
