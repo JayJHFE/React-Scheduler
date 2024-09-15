@@ -35,36 +35,28 @@ function RightLowerContainer() {
         className="right-upper-container__button"
         onClick={() => handleAddRow()}
       ></button>
-      {/* 리덕스 스토어에 전역변수를 등록해서, 일정 목록을 추가함*/}
-      {/* <div className="rightLowerContainer__content">
-        <div className="rightLowerContainer__content__item">
-          <div className="rightLowerContainer__content__item__header">
-            <h2>Meeting</h2>
-            <p>10:00 AM</p>
+      <div>
+        {schedulerows.map((row, i) => (
+          <div
+            key={row.id}
+            style={{
+              zIndex: 100,
+              width: "180px",
+              height: "60px",
+              backgroundColor: "blue",
+              display: "flex",
+              flexDirection: "column",
+              position: "sticky",
+              top: `${i * 30}px`,
+              left: 0, // 각 div가 서로 다른 위치에 놓이도록 조정
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            {row.name}
           </div>
-          <div className="rightLowerContainer__content__item__content">
-            <p>Meeting with the team</p>
-          </div>
-        </div>
-        <div className="rightLowerContainer__content__item">
-          <div className="rightLowerContainer__content__item__header">
-            <h2>Meeting</h2>
-            <p>10:00 AM</p>
-          </div>
-          <div className="rightLowerContainer__content__item__content">
-            <p>Meeting with the team</p>
-          </div>
-        </div>
-        <div className="rightLowerContainer__content__item">
-          <div className="rightLowerContainer__content__item__header">
-            <h2>Meeting</h2>
-            <p>10:00 AM</p>
-          </div>
-          <div className="rightLowerContainer__content__item__content">
-            <p>Meeting with the team</p>
-          </div>
-        </div>
-      </div> */}
+        ))}
+      </div>
     </div>
   );
 }
