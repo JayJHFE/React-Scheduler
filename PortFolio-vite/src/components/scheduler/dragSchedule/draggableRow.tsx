@@ -3,7 +3,6 @@ import { useDrag } from "react-dnd";
 interface Row {
   id: number;
   name: string;
-  content: string;
 }
 
 interface DraggableRowProps {
