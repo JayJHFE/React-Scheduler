@@ -2,6 +2,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store/store";
 import DroppableMinuteDiv from "../dropSchedule/DroppableMinuteDiv";
 import { useState } from "react";
+import DraggableDroppedItem from "../dropSchedule/DraggableDropedItem";
 
 interface DraggedItem {
   id: number;
@@ -17,16 +18,25 @@ function SchedulerTable() {
   >([]); // 여러 드롭된 아이템과 위치를 저장하는 상태
   const hoursArray = Array.from({ length: 25 }, (_, i) => i);
 
+  // const handleDrop = (item: DraggedItem, minuteIndex: number) => {
+  //   if (droppedItems.some((dropped) => dropped.item.id === item.id)) {
+  //     return; // 이미 드롭된 아이템이면 무시
+  //   }
+  //   // 드롭된 아이템과 해당 위치를 상태에 추가
+  //   setDroppedItems((prevDroppedItems) => [
+  //     ...prevDroppedItems,
+  //     { item, minuteIndex },
+  //   ]);
+  //   console.log("Dropped item:", item); // 드래그된 객체의 정보
+  // };
   const handleDrop = (item: DraggedItem, minuteIndex: number) => {
-    if (droppedItems.some((dropped) => dropped.item.id === item.id)) {
-      return; // 이미 드롭된 아이템이면 무시
-    }
-    // 드롭된 아이템과 해당 위치를 상태에 추가
-    setDroppedItems((prevDroppedItems) => [
-      ...prevDroppedItems,
-      { item, minuteIndex },
-    ]);
-    console.log("Dropped item:", item); // 드래그된 객체의 정보
+    // 이미 드롭된 아이템을 찾고, 있으면 삭제
+    setDroppedItems((prevDroppedItems) => {
+      const updatedItems = prevDroppedItems.filter(
+        (dropped) => dropped.item.id !== item.id
+      );
+      return [...updatedItems, { item, minuteIndex }];
+    });
   };
 
   return (
@@ -94,24 +104,28 @@ function SchedulerTable() {
 
                         {/* 드롭된 아이템을 해당 위치에 렌더링 */}
                         {droppedItem && (
-                          <div
-                            style={{
-                              position: "absolute",
-                              top: 0,
-                              left: 0,
-                              backgroundColor: "blue",
-                              width: `${
-                                droppedItem.item.hour * 180 +
-                                droppedItem.item.minute * 3
-                              }px`,
-                              height: "50px",
-                              color: "white",
-                              zIndex: 10,
-                            }}
-                          >
-                            {droppedItem.item.name} - {droppedItem.item.hour}:
-                            {droppedItem.item.minute}
-                          </div>
+                          <DraggableDroppedItem
+                            item={droppedItem.item}
+                            minuteIndex={droppedItem.minuteIndex}
+                          />
+                          // <div
+                          //   style={{
+                          //     position: "absolute",
+                          //     top: 0,
+                          //     left: 0,
+                          //     backgroundColor: "blue",
+                          //     width: `${
+                          //       droppedItem.item.hour * 180 +
+                          //       droppedItem.item.minute * 3
+                          //     }px`,
+                          //     height: "50px",
+                          //     color: "white",
+                          //     zIndex: 10,
+                          //   }}
+                          // >
+                          //   {droppedItem.item.name} - {droppedItem.item.hour}:
+                          //   {droppedItem.item.minute}
+                          // </div>
                         )}
                       </div>
                     );

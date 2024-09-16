@@ -7,13 +7,13 @@ interface Row {
   minute: number;
 }
 
-interface DraggableRowProps {
+interface DraggableItemProps {
   row: Row; // row의 타입을 명시적으로 지정
   id: number;
   index: number;
 }
 
-function DraggableRow({ row, index }: DraggableRowProps) {
+function DraggableItem({ row, index }: DraggableItemProps) {
   const [{ isDragging }, drag] = useDrag(() => ({
     type: "SCHEDULE", // 고유 타입
     item: { id: row.id, name: row.name, hour: row.hour, minute: row.minute }, // 드래그할 때 넘길 데이터
@@ -46,4 +46,4 @@ function DraggableRow({ row, index }: DraggableRowProps) {
   );
 }
 
-export default DraggableRow;
+export default DraggableItem;
