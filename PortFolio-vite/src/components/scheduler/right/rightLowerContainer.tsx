@@ -6,6 +6,13 @@ import { openModal } from "../../../redux/slice/modalShowChangeSlice";
 import DraggableRow from "../dragSchedule/draggableRow";
 import { useState } from "react";
 
+interface DraggedItem {
+  id: number;
+  name: string;
+  hour: number;
+  minute: number;
+}
+
 function RightLowerContainer() {
   const schedulerows = useSelector(
     (state: RootState) => state.newSchedule.schedulerows

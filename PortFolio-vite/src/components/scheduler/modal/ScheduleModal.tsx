@@ -45,6 +45,9 @@ function ScheduleModal() {
         isOpen={isModalOpen}
         onRequestClose={() => dispatch(closeModal())}
         style={{
+          overlay: {
+            zIndex: 1000, // 오버레이의 z-index를 높임
+          },
           content: {
             width: "500px",
             height: "500px",
@@ -54,6 +57,7 @@ function ScheduleModal() {
             bottom: "auto",
             marginRight: "-50%",
             transform: "translate(-50%, -50%)",
+            zIndex: 1001,
           },
         }}
       >

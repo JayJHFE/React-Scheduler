@@ -89,6 +89,7 @@ function SchedulerTable() {
                         <DroppableMinuteDiv
                           minuteIndex={absoluteMinuteIndex}
                           handleDrop={handleDrop} // 드롭 처리 함수 전달
+                          droppedItems={droppedItems} // 드롭된 아이템 상태 전달
                         />
 
                         {/* 드롭된 아이템을 해당 위치에 렌더링 */}
