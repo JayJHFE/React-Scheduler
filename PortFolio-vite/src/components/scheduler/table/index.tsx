@@ -70,7 +70,7 @@ function SchedulerTable() {
                     justifyContent: "center",
                   }}
                 >
-                  시간들어가
+                  {`${hourIndex.toString().padStart(2, "0")}:00`}
                 </div>
               ) : (
                 <div

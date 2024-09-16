@@ -46,7 +46,25 @@ function DroppableMinuteDiv({
         width: "3px",
         height: "100%",
       }}
-    />
+    >
+      {isOver && canDrop && (
+        <div
+          style={{
+            position: "absolute",
+            top: "-30px",
+            left: "0",
+            backgroundColor: "black",
+            color: "white",
+            padding: "5px",
+            borderRadius: "3px",
+            fontSize: "12px",
+            zIndex: 9999,
+          }}
+        >
+          {minuteIndex}분에 드롭 가능
+        </div>
+      )}
+    </div>
   );
 }
 
