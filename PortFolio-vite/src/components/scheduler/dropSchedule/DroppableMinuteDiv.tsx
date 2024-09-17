@@ -8,30 +8,23 @@ interface DraggedItem {
 }
 
 function DroppableMinuteDiv({
-  minuteIndex,
+  hour,
+  minute,
+  timeIndex,
   handleDrop,
   droppedItems,
 }: {
-  minuteIndex: number;
-  handleDrop: (item: DraggedItem, minuteIndex: number) => void;
-  droppedItems: { item: DraggedItem; minuteIndex: number }[];
+  hour: number;
+  minute: number;
+  timeIndex: number;
+  handleDrop: (item: DraggedItem, timeIndex: number) => void;
+  droppedItems: { item: DraggedItem; timeIndex: number }[];
 }) {
-  // const [{ isOver }, drop] = useDrop(() => ({
-  //   accept: "SCHEDULE", // 드롭할 수 있는 아이템의 타입
-  //   drop: (item: DraggedItem) => handleDrop(item, minuteIndex), // 아이템이 드롭되었을 때 처리할 함수
-  //   canDrop: () =>
-  //     !droppedItems.some((dropped) => dropped.minuteIndex === minuteIndex), // 이미 드롭된 곳에는 드롭 불가
-  //   collect: (monitor) => ({
-  //     isOver: !!monitor.isOver(),
-  //     canDrop: monitor.canDrop(),
-  //   }),
-  // }));
-
   const [{ isOver, canDrop }, drop] = useDrop({
     accept: "SCHEDULE",
-    drop: (item: DraggedItem) => handleDrop(item, minuteIndex),
+    drop: (item: DraggedItem) => handleDrop(item, timeIndex),
     canDrop: () =>
-      !droppedItems.some((dropped) => dropped.minuteIndex === minuteIndex), // 에러가 나는 부분
+      !droppedItems.some((dropped) => dropped.timeIndex === timeIndex),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
       canDrop: monitor.canDrop(),
@@ -40,16 +33,20 @@ function DroppableMinuteDiv({
 
   return (
     <div
-      ref={drop} // drop 가능하게 ref 연결
+      ref={drop}
       style={{
         backgroundColor: isOver ? "lightgreen" : "yellow",
         width: "3px",
         height: "100%",
       }}
     >
+      {/* 드래그 중일 때 툴팁으로 시간 표시 */}
       {isOver && canDrop && (
         <div
           style={{
+            width: "200px",
+            height: "80px",
+            fontSize: "20px",
             position: "absolute",
             top: "-30px",
             left: "0",
@@ -57,11 +54,13 @@ function DroppableMinuteDiv({
             color: "white",
             padding: "5px",
             borderRadius: "3px",
-            fontSize: "12px",
             zIndex: 9999,
           }}
         >
-          {minuteIndex}분에 드롭 가능
+          {`${hour.toString().padStart(2, "0")}:${minute
+            .toString()
+            .padStart(2, "0")}`}{" "}
+          분
         </div>
       )}
     </div>

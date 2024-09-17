@@ -9,14 +9,14 @@ interface DraggedItem {
 
 function DraggableDroppedItem({
   item,
-  minuteIndex,
+  timeIndex,
 }: {
   item: DraggedItem;
-  minuteIndex: number;
+  timeIndex: number; // timeIndex로 변경
 }) {
   const [{ isDragging }, drag] = useDrag({
     type: "SCHEDULE",
-    item: { ...item, minuteIndex }, // 드래그할 때 해당 아이템과 위치 정보를 보냄
+    item: { ...item, timeIndex }, // 드래그할 때 해당 아이템과 위치 정보를 보냄
     collect: (monitor) => ({
       isDragging: !!monitor.isDragging(),
     }),
@@ -35,7 +35,7 @@ function DraggableDroppedItem({
         height: "50px",
         color: "white",
         opacity: isDragging ? 0.5 : 1, // 드래그 시 투명도 적용
-        cursor: "cursor", // 드래그 시 커서 변경
+        cursor: "move", // 드래그 시 커서 변경
       }}
     >
       {item.name} - {item.hour}:{item.minute}
