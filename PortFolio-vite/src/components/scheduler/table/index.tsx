@@ -16,7 +16,7 @@ function SchedulerTable() {
   const [droppedItems, setDroppedItems] = useState<
     { item: DraggedItem; timeIndex: number }[]
   >([]); // 여러 드롭된 아이템과 위치를 저장하는 상태
-  const hoursArray = Array.from({ length: 24 }, (_, i) => i); // 24시간으로 변경
+  const hoursArray = Array.from({ length: 25 }, (_, i) => i); // 24시간으로 변경
 
   const handleDrop = (item: DraggedItem, timeIndex: number) => {
     // 이미 드롭된 아이템을 찾고, 있으면 삭제
