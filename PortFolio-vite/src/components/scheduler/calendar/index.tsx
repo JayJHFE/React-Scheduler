@@ -12,7 +12,7 @@ function Calendar() {
 
   // "오늘" 날짜를 저장하는 상태
   const [today, setToday] = useState<string | null>(null);
-
+  const calendarContainerRef = useRef<HTMLDivElement | null>(null);
   const todayRef = useRef<HTMLDivElement | null>(null);
 
   // 해당 연도와 월의 모든 일자와 요일을 반환하는 함수
@@ -57,21 +57,62 @@ function Calendar() {
   };
 
   // "오늘" 버튼 클릭 시 현재 날짜로 이동
+  // const handleTodayClick = () => {
+  //   const todayDate = dayjs().format("YYYY-MM-DD");
+  //   setCurrentYear(dayjs().year());
+  //   setCurrentMonth(dayjs().month() + 1);
+  //   setToday(todayDate); // 오늘의 날짜를 저장
+  // };
+
   const handleTodayClick = () => {
     const todayDate = dayjs().format("YYYY-MM-DD");
     setCurrentYear(dayjs().year());
     setCurrentMonth(dayjs().month() + 1);
     setToday(todayDate); // 오늘의 날짜를 저장
-  };
 
-  useEffect(() => {
-    if (today && todayRef.current) {
-      todayRef.current.scrollIntoView({
+    // "오늘" 날짜가 부모 div의 중앙에 오도록 스크롤
+    if (todayRef.current && calendarContainerRef.current) {
+      const todayElement = todayRef.current;
+      const calendarContainer = calendarContainerRef.current;
+
+      // 부모의 중앙 위치 계산
+      const containerWidth = calendarContainer.offsetWidth;
+      const todayElementLeft = todayElement.offsetLeft;
+      const todayElementWidth = todayElement.offsetWidth;
+
+      // 오늘 날짜가 부모 div의 중앙에 오도록 스크롤 위치 계산
+      const scrollPosition =
+        todayElementLeft - containerWidth / 2 + todayElementWidth / 2;
+
+      // 수동으로 스크롤 설정
+      calendarContainer.scrollTo({
+        left: scrollPosition,
         behavior: "smooth",
-        block: "center",
       });
     }
-  }, [today]);
+  };
+
+  // useEffect(() => {
+  //   if (today && todayRef.current && calendarContainerRef.current) {
+  //     const todayElement = todayRef.current;
+  //     const calendarContainer = calendarContainerRef.current;
+
+  //     // 부모의 중앙 위치 계산
+  //     const containerWidth = calendarContainer.offsetWidth;
+  //     const todayElementLeft = todayElement.offsetLeft;
+  //     const todayElementWidth = todayElement.offsetWidth;
+
+  //     // 오늘 날짜가 부모 div의 중앙에 오도록 스크롤 위치 계산
+  //     const scrollPosition =
+  //       todayElementLeft - containerWidth / 2 + todayElementWidth / 2 - 400;
+
+  //     // 수동으로 스크롤 설정
+  //     calendarContainer.scrollTo({
+  //       left: scrollPosition,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // }, [today]);
 
   return (
     <div
@@ -105,11 +146,15 @@ function Calendar() {
         오늘
       </button>
 
-      <div style={{ overflow: "auto", width: "1000px" }}>
+      <div
+        ref={calendarContainerRef}
+        style={{ overflow: "auto", width: "1000px" }}
+      >
         <S.rowScheduler>
           {selectedDate?.map((day, idx) => (
             <div
               key={idx}
+              ref={today === day.fullDate ? todayRef : null} // 오늘 날짜의 div에 ref 연결
               style={{
                 border: today === day.fullDate ? "2px solid blue" : "none", // 오늘이면 파란색 테두리
               }}
