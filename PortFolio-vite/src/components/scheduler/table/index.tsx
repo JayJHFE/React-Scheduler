@@ -47,7 +47,6 @@ function SchedulerTable() {
                 <div
                   key={hourIndex}
                   style={{
-                    backgroundColor: "red",
                     width: "180px",
                     height: "60px",
                     border: "1px solid black",
@@ -63,7 +62,6 @@ function SchedulerTable() {
                 <div
                   key={hourIndex}
                   style={{
-                    backgroundColor: "red",
                     width: "180px",
                     height: "60px",
                     border: "1px solid black",

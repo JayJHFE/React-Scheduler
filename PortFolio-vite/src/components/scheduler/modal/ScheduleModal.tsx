@@ -103,7 +103,7 @@ function ScheduleModal() {
           <div>
             <button
               style={{
-                backgroundColor: "red",
+                // backgroundColor: "red",
                 color: "white",
               }}
               onClick={() => dispatch(closeModal())}

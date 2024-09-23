@@ -145,12 +145,13 @@ function Calendar() {
         flexDirection: "row",
         justifyContent: "space-between",
         padding: "0px 50px",
-        backgroundColor: "blue",
+        alignItems: "center",
+        // backgroundColor: "blue",
       }}
     >
       <div
         style={{
-          backgroundColor: "green",
+          // backgroundColor: "green",
           width: "200px",
           fontSize: "30px",
           alignItems: "center",
@@ -159,14 +160,23 @@ function Calendar() {
         }}
       >
         {currentYear}년 {currentMonth}월
-        <button onClick={handlePrevMonth} style={{ fontSize: "24px" }}>
+        <button
+          onClick={handlePrevMonth}
+          style={{ fontSize: "24px", backgroundColor: "yellow" }}
+        >
           ◀
         </button>
-        <button onClick={handleNextMonth} style={{ fontSize: "24px" }}>
+        <button
+          onClick={handleNextMonth}
+          style={{ fontSize: "24px", backgroundColor: "yellow" }}
+        >
           ▶
         </button>
       </div>
-      <button style={{ height: "50px" }} onClick={handleTodayClick}>
+      <button
+        style={{ height: "50px", backgroundColor: "yellow" }}
+        onClick={handleTodayClick}
+      >
         오늘
       </button>
 

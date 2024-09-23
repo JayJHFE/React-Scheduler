@@ -30,7 +30,7 @@ function DraggableDroppedItem({
         position: "absolute",
         top: 0,
         left: 0,
-        backgroundColor: "blue",
+        // backgroundColor: "blue",
         width: `${item.hour * 180 + item.minute * 3}px`,
         height: "50px",
         color: "white",
