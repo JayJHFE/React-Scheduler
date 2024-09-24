@@ -9,4 +9,5 @@ export const rowScheduler = styled.div`
   width:1920px;
   box-shadow: 2px 2px 7.5px 0px rgba
   overflow: auto;
+  background-color: red;
 `;

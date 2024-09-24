@@ -116,28 +116,6 @@ function Calendar() {
     }
   }, [today, currentYear, currentMonth]);
 
-  // useEffect(() => {
-  //   if (today && todayRef.current && calendarContainerRef.current) {
-  //     const todayElement = todayRef.current;
-  //     const calendarContainer = calendarContainerRef.current;
-
-  //     // 부모의 중앙 위치 계산
-  //     const containerWidth = calendarContainer.offsetWidth;
-  //     const todayElementLeft = todayElement.offsetLeft;
-  //     const todayElementWidth = todayElement.offsetWidth;
-
-  //     // 오늘 날짜가 부모 div의 중앙에 오도록 스크롤 위치 계산
-  //     const scrollPosition =
-  //       todayElementLeft - containerWidth / 2 + todayElementWidth / 2 - 400;
-
-  //     // 수동으로 스크롤 설정
-  //     calendarContainer.scrollTo({
-  //       left: scrollPosition,
-  //       behavior: "smooth",
-  //     });
-  //   }
-  // }, [today]);
-
   return (
     <div
       style={{
@@ -182,7 +160,7 @@ function Calendar() {
 
       <div
         ref={calendarContainerRef}
-        style={{ overflow: "auto", width: "1000px" }}
+        style={{ overflow: "auto", width: "1000px", backgroundColor: "blue" }}
       >
         <S.rowScheduler>
           {selectedDate?.map((day, idx) => (
