@@ -1,3 +1,50 @@
+// import { useDrag } from "react-dnd";
+
+// interface DraggedItem {
+//   id: number;
+//   name: string;
+//   hour: number;
+//   minute: number;
+// }
+
+// function DraggableDroppedItem({
+//   item,
+//   timeIndex,
+// }: {
+//   item: DraggedItem;
+//   timeIndex: number; // timeIndex로 변경
+// }) {
+//   const [{ isDragging }, drag] = useDrag({
+//     type: "SCHEDULE",
+//     item: { ...item, timeIndex }, // 드래그할 때 해당 아이템과 위치 정보를 보냄
+//     collect: (monitor) => ({
+//       isDragging: !!monitor.isDragging(),
+//     }),
+//   });
+
+//   return (
+//     <div
+//       ref={drag}
+//       style={{
+//         zIndex: 100,
+//         position: "absolute",
+//         top: 0,
+//         left: 0,
+//         // backgroundColor: "blue",
+//         width: `${item.hour * 180 + item.minute * 3}px`,
+//         height: "50px",
+//         color: "white",
+//         opacity: isDragging ? 0.5 : 1, // 드래그 시 투명도 적용
+//         cursor: "move", // 드래그 시 커서 변경
+//       }}
+//     >
+//       {item.name} - {item.hour}:{item.minute}
+//     </div>
+//   );
+// }
+
+// export default DraggableDroppedItem;
+
 import { useDrag } from "react-dnd";
 
 interface DraggedItem {
@@ -10,16 +57,26 @@ interface DraggedItem {
 function DraggableDroppedItem({
   item,
   timeIndex,
+  rowIndex,
+  handleRemove,
 }: {
   item: DraggedItem;
-  timeIndex: number; // timeIndex로 변경
+  timeIndex: number;
+  rowIndex: number;
+  handleRemove: (timeIndex: number, rowIndex: number) => void;
 }) {
   const [{ isDragging }, drag] = useDrag({
     type: "SCHEDULE",
-    item: { ...item, timeIndex }, // 드래그할 때 해당 아이템과 위치 정보를 보냄
+    item: { ...item, timeIndex, rowIndex },
     collect: (monitor) => ({
-      isDragging: !!monitor.isDragging(),
+      isDragging: monitor.isDragging() as boolean, // 타입 명시
     }),
+    // 드래그가 끝나면 원래 위치에서 아이템을 삭제
+    end: (draggedItem, monitor) => {
+      if (monitor.didDrop()) {
+        handleRemove(timeIndex, rowIndex);
+      }
+    },
   });
 
   return (
@@ -30,15 +87,15 @@ function DraggableDroppedItem({
         position: "absolute",
         top: 0,
         left: 0,
-        // backgroundColor: "blue",
         width: `${item.hour * 180 + item.minute * 3}px`,
         height: "50px",
+        backgroundColor: "blue",
         color: "white",
-        opacity: isDragging ? 0.5 : 1, // 드래그 시 투명도 적용
-        cursor: "move", // 드래그 시 커서 변경
+        opacity: isDragging ? 0.5 : 1,
+        cursor: "move",
       }}
     >
-      {item.name} - {item.hour}:{item.minute}
+      {item.name}
     </div>
   );
 }
