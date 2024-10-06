@@ -6,8 +6,6 @@ export const rowScheduler = styled.div`
   white-space: nowrap;
   padding: 20px 10px 20px 10px;
   border: 1px solid #f0f0f0;
-  width:1920px;
-  box-shadow: 2px 2px 7.5px 0px rgba
+  width: 1920px;
   overflow: auto;
-  background-color: red;
 `;

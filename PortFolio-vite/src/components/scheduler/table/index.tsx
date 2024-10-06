@@ -188,7 +188,7 @@ function SchedulerTable() {
           <div
             key={rowIndex}
             style={{
-              width: "4300px",
+              width: "4320px",
               color: "blue",
               display: "flex",
               flexDirection: "row",
