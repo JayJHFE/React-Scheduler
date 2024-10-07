@@ -7,4 +7,5 @@ export const dateDiv = styled.div`
   background-color: #ffffff;
   flex: 0 0 auto;
   width: 100px;
+  border-radius: 40px;
 `;
