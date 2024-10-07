@@ -122,7 +122,7 @@ function Calendar() {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
-        padding: "0px 50px",
+        padding: "10px 50px",
         alignItems: "center",
         // backgroundColor: "blue",
       }}
@@ -160,7 +160,12 @@ function Calendar() {
 
       <div
         ref={calendarContainerRef}
-        style={{ overflow: "auto", width: "1000px", backgroundColor: "blue" }}
+        style={{
+          overflow: "auto",
+          width: "1000px",
+          boxShadow: "4px 0px 14px",
+          borderRadius: "40px",
+        }}
       >
         <S.rowScheduler>
           {selectedDate?.map((day, idx) => (
@@ -169,6 +174,7 @@ function Calendar() {
               ref={today === day.fullDate ? todayRef : null} // 오늘 날짜의 div에 ref 연결
               style={{
                 border: today === day.fullDate ? "2px solid blue" : "none", // 오늘이면 파란색 테두리
+                borderRadius: today === day.fullDate ? "20px" : "none", // 오늘이면 원형 모양
               }}
             >
               <DateAndDay day={day.date} date={day.weekdayName} />
