@@ -116,6 +116,8 @@ function Calendar() {
     }
   }, [today, currentYear, currentMonth]);
 
+  console.log(today);
+
   return (
     <div
       style={{
