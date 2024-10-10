@@ -96,6 +96,23 @@ function DraggableDroppedItem({
       }}
     >
       {item.name}
+      <div
+        style={{
+          position: "absolute",
+          top: "0px",
+          right: "0px",
+          backgroundColor: "red",
+          color: "white",
+          border: "none",
+          borderRadius: "50%",
+          width: "20px",
+          height: "20px",
+          cursor: "pointer",
+        }}
+        // onClick={() => handleRemove(droppedItem.timeIndex, rowIndex)}
+      >
+        -
+      </div>
     </div>
   );
 }

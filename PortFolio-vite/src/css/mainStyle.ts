@@ -26,7 +26,7 @@ export const schedulerLeftTableContainer = styled.div`
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 9990;
   background-color: white;
   width: 180px;
   flex-shrink: 0;
