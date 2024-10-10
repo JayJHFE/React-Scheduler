@@ -142,19 +142,32 @@ function Calendar() {
         {currentYear}년 {currentMonth}월
         <button
           onClick={handlePrevMonth}
-          style={{ fontSize: "24px", backgroundColor: "yellow" }}
+          style={{
+            fontSize: "20px",
+            backgroundColor: "#c7b199",
+            boxShadow: "4px 0px 14px",
+            marginRight: "10px",
+          }}
         >
           ◀
         </button>
         <button
           onClick={handleNextMonth}
-          style={{ fontSize: "24px", backgroundColor: "yellow" }}
+          style={{
+            fontSize: "20px",
+            backgroundColor: "#c7b199",
+            boxShadow: "4px 0px 14px",
+          }}
         >
           ▶
         </button>
       </div>
       <button
-        style={{ height: "50px", backgroundColor: "yellow" }}
+        style={{
+          height: "40px",
+          backgroundColor: "#c7b199",
+          boxShadow: "4px 0px 14px",
+        }}
         onClick={handleTodayClick}
       >
         오늘

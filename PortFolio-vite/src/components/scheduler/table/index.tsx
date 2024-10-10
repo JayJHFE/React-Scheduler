@@ -244,10 +244,17 @@ function SchedulerTable() {
 
                         {droppedItem && (
                           <DraggableDroppedItem
+                            // item={droppedItem.item}
+                            // timeIndex={droppedItem.timeIndex}
+                            // rowIndex={rowIndex}
+                            // handleRemove={handleRemove} // 드래그 시작 시 삭제
+
                             item={droppedItem.item}
                             timeIndex={droppedItem.timeIndex}
                             rowIndex={rowIndex}
-                            handleRemove={handleRemove} // 드래그 시작 시 삭제
+                            handleRemove={handleRemove}
+                            rowDroppedItems={rowDroppedItems}
+                            setRowDroppedItems={setRowDroppedItems}
                           />
                         )}
                       </div>
