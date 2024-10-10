@@ -55,15 +55,36 @@ interface DraggedItem {
 }
 
 function DraggableDroppedItem({
+  //   item,
+  //   timeIndex,
+  //   rowIndex,
+  //   handleRemove,
+  // }: {
+  //   item: DraggedItem;
+  //   timeIndex: number;
+  //   rowIndex: number;
+  //   handleRemove: (timeIndex: number, rowIndex: number) => void;
+  // })
   item,
   timeIndex,
   rowIndex,
   handleRemove,
+  rowDroppedItems,
+  setRowDroppedItems,
 }: {
   item: DraggedItem;
   timeIndex: number;
   rowIndex: number;
   handleRemove: (timeIndex: number, rowIndex: number) => void;
+  rowDroppedItems: {
+    rowIndex: number;
+    items: { item: DraggedItem; timeIndex: number }[];
+  }[];
+  setRowDroppedItems: React.Dispatch<
+    React.SetStateAction<
+      { rowIndex: number; items: { item: DraggedItem; timeIndex: number }[] }[]
+    >
+  >;
 }) {
   const [{ isDragging }, drag] = useDrag({
     type: "SCHEDULE",
@@ -109,7 +130,7 @@ function DraggableDroppedItem({
           height: "20px",
           cursor: "pointer",
         }}
-        // onClick={() => handleRemove(droppedItem.timeIndex, rowIndex)}
+        onClick={() => handleRemove(timeIndex, rowIndex)}
       >
         -
       </div>
