@@ -126,7 +126,7 @@ function Calendar() {
         justifyContent: "space-between",
         padding: "10px 50px",
         alignItems: "center",
-        // backgroundColor: "blue",
+        backgroundColor: "#D6CCC2",
       }}
     >
       <div
@@ -137,10 +137,11 @@ function Calendar() {
           alignItems: "center",
           justifyContent: "center",
           paddingTop: "20px",
+          backgroundColor: "#D6CCC2",
         }}
       >
         {currentYear}년 {currentMonth}월
-        <div style={{ marginTop: "10px" }}>
+        <div style={{ marginTop: "10px", backgroundColor: "#D6CCC2" }}>
           <button
             onClick={handlePrevMonth}
             style={{

@@ -201,7 +201,7 @@ function SchedulerTable() {
                   style={{
                     width: "180px",
                     height: "60px",
-                    border: "1px solid black",
+                    borderLeft: "1px solid #de872d",
                     display: "flex",
                     flexDirection: "row",
                     alignItems: "center",

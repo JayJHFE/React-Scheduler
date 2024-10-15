@@ -9,6 +9,7 @@ export const Container = styled.div`
 export const innerContainer = styled.div`
   width: 1500px;
   height: 900px;
+  background-color: #f5ebe0;
 `;
 export const calendarContainer = styled.div`
   display: "flex";
@@ -19,6 +20,7 @@ export const schedulerContainer = styled.div`
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
+  border: 1px solid #de872d;
   overflow-x: auto; /* 스크롤을 schedulerContainer에 적용 */
   position: relative;
 `;
