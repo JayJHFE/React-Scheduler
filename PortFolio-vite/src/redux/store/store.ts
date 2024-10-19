@@ -3,6 +3,7 @@ import componentChangeReducer from "../slice/componentChangeSlice";
 import tableLengthChangeReducer from "../slice/tableLengthChangeSlice";
 import newScheduleReducer from "../slice/newScheduleSlice";
 import modalReducer from "../slice/modalShowChangeSlice";
+import scheduleReducer from "../slice/scheduleSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     tableLengthChange: tableLengthChangeReducer,
     newSchedule: newScheduleReducer,
     modal: modalReducer,
+    schedule: scheduleReducer,
   },
 });
 
