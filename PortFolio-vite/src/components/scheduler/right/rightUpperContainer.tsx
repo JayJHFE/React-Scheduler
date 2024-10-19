@@ -23,8 +23,10 @@ function RightUpperContainer() {
         display: "flex",
         flexDirection: "column",
         height: "300px",
-        backgroundColor: "orange",
+        backgroundColor: "#D5BDaf",
         alignItems: "center",
+        boxShadow: "4px 0px 14px",
+        borderRadius: "20px",
       }}
     >
       <div className="right-upper-container__title">할일목록</div>

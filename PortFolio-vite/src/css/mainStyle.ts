@@ -41,4 +41,6 @@ export const schedulerTableContainer = styled.div`
 export const rightContainer = styled.div`
   width: calc(100% - 1500px);
   height: 900px;
+  padding: 30px 20px 30px 20px;
+  background-color: #d6ccc2;
 `;
