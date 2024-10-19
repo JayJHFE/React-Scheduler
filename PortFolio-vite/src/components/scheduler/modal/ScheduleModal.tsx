@@ -132,7 +132,7 @@ Modal.setAppElement("#root");
 
 const hourOptions = Array.from({ length: 13 }, (_, i) => ({
   value: i,
-  label: `${i}시`,
+  label: `${i}시간`,
 }));
 
 const minuteOptions = Array.from({ length: 60 }, (_, i) => ({
@@ -182,13 +182,14 @@ function ScheduleModal() {
           },
           content: {
             width: "500px",
-            height: "500px",
             top: "50%",
             left: "50%",
             right: "auto",
             bottom: "auto",
             marginRight: "-50%",
             transform: "translate(-50%, -50%)",
+            backgroundColor: "#d9bf9e",
+            borderRadius: "20px",
             zIndex: 1001,
           },
         }}
@@ -198,15 +199,24 @@ function ScheduleModal() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            backgroundColor: "#d9bf9e",
           }}
         >
-          <h2>세부일정 입력</h2>
+          일정 상세
           <input
             type="text"
             placeholder="일정 이름"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            style={{ width: "300px", height: "50px" }}
+            style={{
+              width: "300px",
+              height: "50px",
+              border: "none",
+              borderRadius: "10px",
+              marginTop: "20px",
+              paddingLeft: "10px",
+              marginBottom: "20px",
+            }}
           />
           <div
             style={{
@@ -219,28 +229,38 @@ function ScheduleModal() {
             <Select
               options={hourOptions}
               isSearchable={true}
-              placeholder="시를 선택하세요"
-              value={selectedHour} // 선택된 값을 명시적으로 설정
-              onChange={(selectedOption) => setSelectedHour(selectedOption)} // 객체 전체를 저장
+              placeholder="시간을 선택하세요"
+              value={selectedHour}
+              onChange={(selectedOption) => setSelectedHour(selectedOption)}
             />
             <Select
               options={minuteOptions}
               isSearchable={true}
               placeholder="분을 선택하세요"
-              value={selectedMinute} // 선택된 값을 명시적으로 설정
-              onChange={(selectedOption) => setSelectedMinute(selectedOption)} // 객체 전체를 저장
+              value={selectedMinute}
+              onChange={(selectedOption) => setSelectedMinute(selectedOption)}
             />
           </div>
-          <div>
+          <div style={{ marginTop: "20px" }}>
             <button
               style={{
-                color: "white",
+                backgroundColor: "#ffffff",
+                color: "black",
+                marginRight: "10px",
               }}
               onClick={() => dispatch(closeModal())}
             >
               닫기
             </button>
-            <button onClick={handleSave}>저장</button>
+            <button
+              style={{
+                backgroundColor: "#ffffff",
+                color: "black",
+              }}
+              onClick={handleSave}
+            >
+              저장
+            </button>
           </div>
         </div>
       </Modal>

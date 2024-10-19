@@ -183,6 +183,7 @@ function Calendar() {
           width: "1000px",
           boxShadow: "4px 0px 14px",
           borderRadius: "40px",
+          backgroundColor: "#ffffff",
         }}
       >
         <S.rowScheduler>
