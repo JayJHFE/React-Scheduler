@@ -182,6 +182,7 @@ function ScheduleModal() {
           },
           content: {
             width: "500px",
+            height: "500px",
             top: "50%",
             left: "50%",
             right: "auto",

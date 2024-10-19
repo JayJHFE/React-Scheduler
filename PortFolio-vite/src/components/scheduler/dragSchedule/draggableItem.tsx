@@ -27,9 +27,9 @@ function DraggableItem({ row, index }: DraggableItemProps) {
       ref={drag} // 드래그 가능하게 만들기 위해 ref를 연결
       style={{
         zIndex: 100,
-        width: "180px",
+        width: "150px",
         height: "60px",
-        backgroundColor: isDragging ? "lightgreen" : "blue", // 드래그 중인 경우 색상을 변경
+        backgroundColor: isDragging ? "lightgreen" : "#9f8473", // 드래그 중인 경우 색상을 변경
         display: "flex",
         flexDirection: "column",
         position: "sticky",
@@ -38,7 +38,8 @@ function DraggableItem({ row, index }: DraggableItemProps) {
         alignItems: "center",
         justifyContent: "center",
         cursor: "pointer",
-        opacity: isDragging ? 0.5 : 1, //
+        opacity: isDragging ? 0.5 : 1,
+        borderRadius: "10px",
       }}
     >
       {row.name}

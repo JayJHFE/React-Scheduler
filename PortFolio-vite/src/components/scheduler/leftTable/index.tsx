@@ -61,6 +61,7 @@ function SchedulerLeftTable() {
                 left: 0, // 각 div가 서로 다른 위치에 놓이도록 조정
                 alignItems: "center",
                 justifyContent: "center",
+                borderTop: "1px solid #de872d",
               }}
             >
               {row.name}

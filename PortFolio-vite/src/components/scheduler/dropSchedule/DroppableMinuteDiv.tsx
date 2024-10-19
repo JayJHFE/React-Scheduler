@@ -110,10 +110,9 @@ function DroppableMinuteDiv({
     <div
       ref={drop}
       style={{
-        backgroundColor: isOver ? "lightgreen" : "yellow",
+        backgroundColor: isOver ? "lightgreen" : "#C7B199",
         width: "3px",
         height: "100%",
-        borderRight: "1px solid black",
       }}
     >
       {/* 드래그 중일 때 툴팁으로 시간 표시 */}

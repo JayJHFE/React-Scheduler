@@ -44,6 +44,7 @@ function RightUpperContainer() {
           border: "none",
           borderRadius: "10px",
           marginTop: "20px",
+          paddingLeft: "10px",
         }}
         onChange={handleInputChange}
       />

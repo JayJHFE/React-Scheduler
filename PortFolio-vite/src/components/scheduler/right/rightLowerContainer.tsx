@@ -26,12 +26,13 @@ function RightLowerContainer() {
     <div
       className="rightLowerContainer"
       style={{
-        height: "300px",
+        minHeight: "300px",
+        height: "fit-content",
         backgroundColor: "#D5BDaf",
         boxShadow: "4px 0px 14px",
         borderRadius: "20px",
         marginTop: "30px",
-        paddingTop: "20px",
+        padding: "20px 0px",
       }}
     >
       <div
@@ -58,7 +59,16 @@ function RightLowerContainer() {
       >
         추가
       </button>
-      <div>
+      <div
+        style={{
+          display: "grid",
+          marginTop: "20px",
+          padding: "0px 20px 0px 20px",
+          gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))",
+          gap: "20px 42px", // 각 그리드 아이템 사이의 간격
+          width: "380px",
+        }}
+      >
         {schedulerows
           .filter(
             (row) => !droppedItems.some((dropped) => dropped.item.id === row.id)

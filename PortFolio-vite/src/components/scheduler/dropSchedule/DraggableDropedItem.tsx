@@ -109,11 +109,13 @@ function DraggableDroppedItem({
         top: 0,
         left: 0,
         width: `${item.hour * 180 + item.minute * 3}px`,
-        height: "50px",
-        backgroundColor: "blue",
+        height: "59px",
+        backgroundColor: "#9f8473",
         color: "white",
         opacity: isDragging ? 0.5 : 1,
         cursor: "move",
+        textAlign: "center",
+        paddingTop: "20px",
       }}
     >
       {item.name}

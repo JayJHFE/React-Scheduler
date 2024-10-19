@@ -216,7 +216,9 @@ function SchedulerTable() {
                   style={{
                     width: "180px",
                     height: "60px",
-                    border: "1px solid black",
+                    borderTop: "1px solid #de872d",
+                    borderRight: "1px solid #de872d",
+                    borderLeft: "1px solid #de872d",
                     display: "flex",
                     flexDirection: "row",
                   }}
