@@ -23,15 +23,41 @@ function RightLowerContainer() {
   >([]);
 
   return (
-    <div className="rightLowerContainer">
-      <div className="rightLowerContainer__header">
-        <h1>일정 목록</h1>
+    <div
+      className="rightLowerContainer"
+      style={{
+        height: "300px",
+        backgroundColor: "#D5BDaf",
+        boxShadow: "4px 0px 14px",
+        borderRadius: "20px",
+        marginTop: "30px",
+        paddingTop: "20px",
+      }}
+    >
+      <div
+        className="rightLowerContainer__header"
+        style={{ backgroundColor: "#D5BDaf" }}
+      >
+        일정목록
       </div>
       <button
         className="right-upper-container__button"
         // onClick={() => handleAddRow()}
         onClick={() => dispatch(openModal())}
-      ></button>
+        style={{
+          width: "80px",
+          minHeight: "30px",
+          border: "none",
+          borderRadius: "10px",
+          marginTop: "20px",
+          backgroundColor: "#f5ebe0",
+          textAlign: "center",
+          fontSize: "14px",
+          height: "fit-content",
+        }}
+      >
+        추가
+      </button>
       <div>
         {schedulerows
           .filter(

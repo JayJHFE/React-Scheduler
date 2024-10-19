@@ -189,7 +189,7 @@ function SchedulerTable() {
             key={rowIndex}
             style={{
               width: "4320px",
-              color: "blue",
+              color: "black",
               display: "flex",
               flexDirection: "row",
             }}

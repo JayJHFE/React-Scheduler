@@ -24,21 +24,45 @@ function RightUpperContainer() {
         flexDirection: "column",
         height: "300px",
         backgroundColor: "#D5BDaf",
-        alignItems: "center",
         boxShadow: "4px 0px 14px",
         borderRadius: "20px",
+        alignItems: "center",
+        paddingTop: "20px",
       }}
     >
-      <div className="right-upper-container__title">할일목록</div>
+      <div
+        className="right-upper-container__title"
+        style={{ backgroundColor: "#D5BDaf" }}
+      >
+        할일목록
+      </div>
       <input
         className="right-upper-container__input"
-        style={{ width: "200px" }}
+        style={{
+          width: "200px",
+          height: "30px",
+          border: "none",
+          borderRadius: "10px",
+          marginTop: "20px",
+        }}
         onChange={handleInputChange}
       />
       <button
         className="right-upper-container__button"
+        style={{
+          width: "80px",
+          height: "30px",
+          border: "none",
+          borderRadius: "10px",
+          marginTop: "20px",
+          backgroundColor: "#f5ebe0",
+          textAlign: "center",
+          fontSize: "14px",
+        }}
         onClick={() => handleAddRow()}
-      ></button>
+      >
+        추가
+      </button>
     </div>
   );
 }
