@@ -1,9 +1,13 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addRow } from "../../../redux/slice/tableLengthChangeSlice";
 import { useState } from "react";
+import { RootState } from "../../../redux/store/store";
 
 function RightUpperContainer() {
   const [inputValue, setInputValue] = useState("");
+  const selectedDate = useSelector(
+    (state: RootState) => state.date.selectedDate
+  );
   const dispatch = useDispatch();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -11,8 +15,8 @@ function RightUpperContainer() {
   };
 
   const handleAddRow = () => {
-    if (inputValue.trim()) {
-      dispatch(addRow({ name: inputValue })); // 입력값을 Redux 액션으로 전달
+    if (inputValue.trim() && selectedDate) {
+      dispatch(addRow({ name: inputValue, date: selectedDate })); // 입력값을 Redux 액션으로 전달
       setInputValue(""); // 입력값 초기화
     }
   };
