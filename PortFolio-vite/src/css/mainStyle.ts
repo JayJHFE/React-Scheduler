@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Body = styled.div``;
 export const Container = styled.div`
   width: 1920px;
-  height: 1080px;
   display: flex;
 `;
 export const innerContainer = styled.div`
