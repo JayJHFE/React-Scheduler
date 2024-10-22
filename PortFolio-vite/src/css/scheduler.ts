@@ -9,10 +9,12 @@ import styled from "styled-components";
 //   overflow: auto;
 // `;
 export const rowScheduler = styled.div`
+  height: 140px;
   display: flex;
   flex-direction: row;
   white-space: nowrap;
   padding: 20px 10px;
-  width: fit-content; // 동적으로 내용에 맞게 너비 설정
+  width: fit-content;
+  background-color: #ffffff;
   overflow: auto;
 `;

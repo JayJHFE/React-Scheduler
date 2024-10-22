@@ -364,8 +364,7 @@ function Calendar() {
           width: "1000px",
           boxShadow: "4px 0px 14px",
           borderRadius: "40px",
-          backgroundColor: "#ffffff",
-          height: "135px",
+          height: "140px",
         }}
       >
         <S.rowScheduler>
@@ -376,7 +375,13 @@ function Calendar() {
               style={{
                 border:
                   selectedDate === day.fullDate ? "2px solid #de872d" : "none",
+                backgroundColor:
+                  selectedDate === day.fullDate ? "#de872d" : "#ffffff",
                 borderRadius: selectedDate === day.fullDate ? "20px" : "none",
+                boxShadow:
+                  selectedDate === day.fullDate
+                    ? "1px 2px 3px 0px rgba(0, 0, 0, 0.25)"
+                    : "none",
               }}
               onClick={() => handleDateClick(day.fullDate)}
             >
