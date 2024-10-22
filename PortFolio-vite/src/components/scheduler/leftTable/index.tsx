@@ -70,12 +70,13 @@ function SchedulerLeftTable() {
                   style={{
                     marginLeft: "10px",
                     width: "180px",
-                    height: "80px",
-                    color: "white",
+                    height: "60px",
+                    color: "black",
                     border: "none",
                     cursor: "pointer",
-                    transform: "translateX(-2.5%) translateY(-40%)",
-                    zIndex: 200,
+                    transform: "translateX(-2.5%) translateY(-20%)",
+                    backgroundColor: "#ffffff",
+                    zIndex: 500,
                   }}
                   onClick={() => handleDelete(row.id)} // 삭제 버튼 클릭 시 row 삭제
                 >

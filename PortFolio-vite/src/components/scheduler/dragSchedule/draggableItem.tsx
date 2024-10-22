@@ -40,6 +40,7 @@ function DraggableItem({ row, index }: DraggableItemProps) {
         cursor: "pointer",
         opacity: isDragging ? 0.5 : 1,
         borderRadius: "10px",
+        boxShadow: "1px 2px 3px 0px rgba(0, 0, 0, 0.25)",
       }}
     >
       {row.name}

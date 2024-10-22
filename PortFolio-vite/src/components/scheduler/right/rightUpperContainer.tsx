@@ -49,6 +49,7 @@ function RightUpperContainer() {
           borderRadius: "10px",
           marginTop: "20px",
           paddingLeft: "10px",
+          boxShadow: "1px 2px 3px 0px rgba(0, 0, 0, 0.25)",
         }}
         onChange={handleInputChange}
       />
