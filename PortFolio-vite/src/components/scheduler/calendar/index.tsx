@@ -285,9 +285,12 @@ function Calendar() {
         const todayElement = todayRef.current;
         const calendarContainer = calendarContainerRef.current;
 
-        const containerWidth = calendarContainer?.offsetWidth;
-        const todayElementLeft = todayElement?.offsetLeft;
-        const todayElementWidth = todayElement?.offsetWidth;
+        // const containerWidth = calendarContainer?.offsetWidth;
+        // const todayElementLeft = todayElement?.offsetLeft;
+        // const todayElementWidth = todayElement?.offsetWidth;
+        const containerWidth = calendarContainer?.offsetWidth || 0; // 'undefined' 방지
+        const todayElementLeft = todayElement?.offsetLeft || 0; // 'undefined' 방지
+        const todayElementWidth = todayElement?.offsetWidth || 0; // 'undefined' 방지
 
         const scrollPosition =
           todayElementLeft - containerWidth / 2 + todayElementWidth / 2 - 400;

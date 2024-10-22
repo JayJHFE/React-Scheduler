@@ -1,8 +1,9 @@
 import "./App.css";
-import Home from "./page/home/index.tsx";
+// import Home from "./page/home/index.tsx";
 import Main from "./page/main/index.tsx";
 import Scheduler from "./page/scheduler/index.tsx";
-import { Link, Navigate, Route, Routes } from "react-router-dom";
+// import { Link, Navigate, Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
   return (

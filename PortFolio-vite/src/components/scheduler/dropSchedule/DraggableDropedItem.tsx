@@ -55,23 +55,13 @@ interface DraggedItem {
 }
 
 function DraggableDroppedItem({
-  //   item,
-  //   timeIndex,
-  //   rowIndex,
-  //   handleRemove,
-  // }: {
-  //   item: DraggedItem;
-  //   timeIndex: number;
-  //   rowIndex: number;
-  //   handleRemove: (timeIndex: number, rowIndex: number) => void;
-  // })
   item,
   timeIndex,
   rowIndex,
   handleRemove,
-  rowDroppedItems,
-  setRowDroppedItems,
-}: {
+}: // rowDroppedItems,
+// setRowDroppedItems,
+{
   item: DraggedItem;
   timeIndex: number;
   rowIndex: number;
@@ -93,7 +83,7 @@ function DraggableDroppedItem({
       isDragging: monitor.isDragging() as boolean, // 타입 명시
     }),
     // 드래그가 끝나면 원래 위치에서 아이템을 삭제
-    end: (draggedItem, monitor) => {
+    end: (_draggedItem, monitor) => {
       if (monitor.didDrop()) {
         handleRemove(timeIndex, rowIndex);
       }

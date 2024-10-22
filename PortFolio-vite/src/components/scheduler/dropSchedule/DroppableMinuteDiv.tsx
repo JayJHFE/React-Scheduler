@@ -84,8 +84,8 @@ function DroppableMinuteDiv({
   timeIndex,
   rowIndex,
   handleDrop,
-  droppedItems,
-}: {
+}: // droppedItems,
+{
   hour: number;
   minute: number;
   timeIndex: number;
