@@ -367,7 +367,7 @@ function Calendar() {
           width: "1000px",
           boxShadow: "4px 0px 14px",
           borderRadius: "40px",
-          height: "140px",
+          height: "150px",
         }}
       >
         <S.rowScheduler>
