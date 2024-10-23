@@ -31,7 +31,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 export const tableLengthChangeSlice = createSlice({
   name: "tableLengthChange",
   initialState: {
-    rows: Array.from({ length: 1 }, (_, i) => ({
+    rows: Array.from({ length: 0 }, (_, i) => ({
       id: i + 1,
       name: `Row ${i + 1}`,
       date: new Date().toISOString().split("T")[0], // 초기 날짜 설정
