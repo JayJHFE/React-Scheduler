@@ -243,6 +243,7 @@ function SchedulerTable() {
             color: "black",
             display: "flex",
             flexDirection: "row",
+            backgroundColor: "#f5ebe0",
           }}
         >
           {hoursArray.map((hourIndex) => (

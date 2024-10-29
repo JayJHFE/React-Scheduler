@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const innerContainer = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: #f5ebe0;
+  background-color: #d6ccc2;
 `;
 export const calendarContainer = styled.div`
   display: "flex";
@@ -19,10 +19,16 @@ export const schedulerContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 100%;
+  width: 82vw;
+  min-width: 1350px;
   border: 1px solid #de872d;
   overflow-x: auto; /* 스크롤을 schedulerContainer에 적용 */
   position: relative;
+  margin-left: 50px;
+  margin-top: 20px;
+  box-shadow: 4px 0px 14px;
+  border-radius: 15px;
+  height: 70vh;
 `;
 export const schedulerLeftTableContainer = styled.div`
   position: sticky;

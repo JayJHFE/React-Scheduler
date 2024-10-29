@@ -374,7 +374,7 @@ function Calendar() {
         ref={calendarContainerRef}
         style={{
           overflow: "auto",
-          width: "auto",
+          width: "70vw",
           boxShadow: "4px 0px 14px",
           borderRadius: "40px",
           height: "150px",
