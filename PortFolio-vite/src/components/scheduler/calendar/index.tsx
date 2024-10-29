@@ -308,7 +308,8 @@ function Calendar() {
       style={{
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-between",
+        // justifyContent: "space-between",
+        gap: "2vw",
         padding: "10px 50px",
         alignItems: "center",
         backgroundColor: "#D6CCC2",
@@ -316,8 +317,8 @@ function Calendar() {
     >
       <div
         style={{
-          width: "200px",
-          fontSize: "30px",
+          // width: "200px",
+          fontSize: "25px",
           alignItems: "center",
           justifyContent: "center",
           paddingTop: "20px",
@@ -325,7 +326,13 @@ function Calendar() {
         }}
       >
         {currentYear}년 {currentMonth}월
-        <div style={{ marginTop: "10px", backgroundColor: "#D6CCC2" }}>
+        <div
+          style={{
+            marginTop: "10px",
+            backgroundColor: "#D6CCC2",
+            display: "flex",
+          }}
+        >
           <button
             onClick={handlePrevMonth}
             style={{
@@ -349,22 +356,25 @@ function Calendar() {
           </button>
         </div>
       </div>
-      <button
-        style={{
-          height: "40px",
-          backgroundColor: "#c7b199",
-          boxShadow: "4px 0px 14px",
-        }}
-        onClick={handleTodayClick}
-      >
-        오늘
-      </button>
+      <div>
+        <button
+          style={{
+            height: "40px",
+            backgroundColor: "#c7b199",
+            boxShadow: "4px 0px 14px",
+            width: "80px",
+          }}
+          onClick={handleTodayClick}
+        >
+          오늘
+        </button>
+      </div>
 
       <div
         ref={calendarContainerRef}
         style={{
           overflow: "auto",
-          width: "1000px",
+          width: "auto",
           boxShadow: "4px 0px 14px",
           borderRadius: "40px",
           height: "150px",

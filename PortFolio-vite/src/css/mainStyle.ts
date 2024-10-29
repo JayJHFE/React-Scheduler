@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const Body = styled.div``;
 export const Container = styled.div`
-  width: 1920px;
+  width: 100vw;
+  height: 100vh;
   display: flex;
 `;
 export const innerContainer = styled.div`
-  width: 1500px;
-  height: 900px;
+  width: 78.125vw;
+  height: 100vh;
   background-color: #f5ebe0;
 `;
 export const calendarContainer = styled.div`
@@ -38,8 +39,6 @@ export const schedulerTableContainer = styled.div`
   overflow: visible;
 `;
 export const rightContainer = styled.div`
-  width: calc(100% - 1500px);
-  height: 900px;
   padding: 30px 20px 30px 20px;
   background-color: #d6ccc2;
 `;
