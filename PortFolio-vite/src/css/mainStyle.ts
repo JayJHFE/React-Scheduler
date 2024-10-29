@@ -7,7 +7,7 @@ export const Container = styled.div`
   display: flex;
 `;
 export const innerContainer = styled.div`
-  width: 78.125vw;
+  width: 100vw;
   height: 100vh;
   background-color: #f5ebe0;
 `;
