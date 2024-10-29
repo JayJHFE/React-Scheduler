@@ -244,6 +244,12 @@ function Calendar() {
     } else {
       setCurrentMonth(currentMonth - 1);
     }
+    if (calendarContainerRef.current) {
+      calendarContainerRef.current.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
+    }
   };
 
   const handleNextMonth = () => {
@@ -252,6 +258,12 @@ function Calendar() {
       setCurrentMonth(1);
     } else {
       setCurrentMonth(currentMonth + 1);
+    }
+    if (calendarContainerRef.current) {
+      calendarContainerRef.current.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
     }
   };
 
