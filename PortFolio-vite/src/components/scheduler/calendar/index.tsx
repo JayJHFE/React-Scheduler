@@ -374,10 +374,10 @@ function Calendar() {
         ref={calendarContainerRef}
         style={{
           overflow: "auto",
-          width: "70vw",
+          width: "68vw",
           boxShadow: "4px 0px 14px",
           borderRadius: "40px",
-          height: "150px",
+          height: "160px",
         }}
       >
         <S.rowScheduler>

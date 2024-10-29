@@ -27,7 +27,7 @@ function DraggableItem({ row, index }: DraggableItemProps) {
       ref={drag} // 드래그 가능하게 만들기 위해 ref를 연결
       style={{
         zIndex: 100,
-        width: "150px",
+        width: "160px",
         height: "60px",
         backgroundColor: isDragging ? "lightgreen" : "#9f8473", // 드래그 중인 경우 색상을 변경
         display: "flex",

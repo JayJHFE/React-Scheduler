@@ -7,7 +7,7 @@ export const Container = styled.div`
   display: flex;
 `;
 export const innerContainer = styled.div`
-  width: 100vw;
+  width: 80vw;
   height: 100vh;
   background-color: #d6ccc2;
 `;
@@ -19,8 +19,6 @@ export const schedulerContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  width: 82vw;
-  min-width: 1350px;
   border: 1px solid #de872d;
   overflow-x: auto; /* 스크롤을 schedulerContainer에 적용 */
   position: relative;
@@ -45,6 +43,7 @@ export const schedulerTableContainer = styled.div`
   overflow: visible;
 `;
 export const rightContainer = styled.div`
-  padding: 30px 20px 30px 20px;
+  padding: 30px 20px 30px 60px;
   background-color: #d6ccc2;
+  width: 20vw;
 `;

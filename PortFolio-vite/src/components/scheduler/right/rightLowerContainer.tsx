@@ -137,10 +137,10 @@ function RightLowerContainer() {
         style={{
           display: "grid",
           marginTop: "20px",
-          padding: "0px 20px 0px 20px",
+          padding: "0px 20px 0px 30px",
           gridTemplateColumns: "repeat(auto-fill, minmax(100px, 1fr))",
           gap: "20px 42px", // 각 그리드 아이템 사이의 간격
-          width: "380px",
+          // width: "380px",
         }}
       >
         {schedulerows.map((row, i) => (
