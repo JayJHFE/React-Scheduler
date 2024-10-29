@@ -9,7 +9,6 @@ import styled from "styled-components";
 //   overflow: auto;
 // `;
 export const rowScheduler = styled.div`
-  height: 170px;
   display: flex;
   flex-direction: row;
   white-space: nowrap;

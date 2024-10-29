@@ -377,7 +377,6 @@ function Calendar() {
           width: "68vw",
           boxShadow: "4px 0px 14px",
           borderRadius: "40px",
-          height: "160px",
         }}
       >
         <S.rowScheduler>
@@ -386,8 +385,7 @@ function Calendar() {
               key={idx}
               ref={selectedDate === day.fullDate ? todayRef : null}
               style={{
-                border:
-                  selectedDate === day.fullDate ? "2px solid #de872d" : "none",
+                paddingBottom: "20px",
                 backgroundColor:
                   selectedDate === day.fullDate ? "#de872d" : "#ffffff",
                 borderRadius: selectedDate === day.fullDate ? "20px" : "none",
