@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# 리액트 스케줄러 프로젝트
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+리액트로 만들어진 스케줄러로서 일일 계획, 과목 시간표, 환자 차트 등 여러 종류의 스케줄러로 사용할 수 있도록 개발되었습니다.
+상세: redux를 이용하여 날짜, 스케줄, 세부일정 등을 전역으로 관리하였고 다른 컴포넌트에서 적용할 수 있도록 처리하였습니다.
+     또한 typescript를 사용하여 해당 타입을 관리하였고, vite를 사용하여 번들링 속도를 높였습니다.
+     next.js의 큰 목적중에 하나인 SSR은 해당 프로젝트에서 사용하지않을 것 같아 적용하지 않았습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!--## 목차
+1. [프로젝트 설명](#프로젝트-설명)
+2. [설치 방법](#설치-방법)
+3. [사용 방법](#사용-방법)
+4. [기여 방법](#기여-방법)
+5. [라이선스](#라이선스)
+!-->
+## 프로젝트 설명
 
-## Expanding the ESLint configuration
+이 프로젝트는 다양한 스케줄 관리 기능을 제공하는 리액트 기반 애플리케이션입니다. 다음과 같은 용도로 사용할 수 있습니다:
+- **일일 계획**: 개인의 일일 일정을 관리할 수 있는 기능
+- **과목 시간표**: 학생을 위한 과목 시간표 생성 및 관리
+- **환자 차트**: 병원에서 환자의 진료 일정을 기록하고 관리
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 구성 요소
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### 구성 버전 및 라이브러리
+- Node.js 14.x 이상
+- react 18.x 버전
+- bundler vite
+- redux 
